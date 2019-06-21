@@ -89,6 +89,8 @@ include::participanting-organizations/NationalLandSurveyofFinland.adoc[]
 
 include::participanting-organizations/NaturalResourcesCanada.adoc[]
 
+include::participanting-organizations/NGAMobileApps.adoc[]
+
 include::participanting-organizations/NOAANWS.adoc[]
 
 include::participanting-organizations/OSGeo.adoc[]
