@@ -1,0 +1,33 @@
+[[NGAMobileApps]]
+=== U.S. National Geospatial-Intelligence Agency, GEOINT Services, Mobile Apps
+
+Developers::
+Brian Osborn:::
+    Author of NGA's https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile apps and by many other developers world-wide
+Robert St. John:::
+    Developer on NGA's https://github.com/ngageoint/MAGE[MAGE]
+
+==== Motivation to Participate
+
+* Assess the feasibility of implementing OGC's new OpenAPI-based
+Features API as native operations in the MAGE server to expose MAGE data
+through a standard, interoperable API.
+* Assess the feasibility of impementing a consumer of OGC's new OpenAPI-based Features API that can build GeoPackages using standard feature
+data from multiple different services for offline use in MAGE and any other
+offline-capable mobile app.
+
+==== Implemented Solution
+
+MAGE server OGC API - Features: https://github.com/ngageoint/mage-server/tree/wfs3
+
+==== Proposed Alternatives
+
+TBA
+
+==== Experiences with OGC API Specifications
+
+TBA
+
+==== Other Impressions & Recommendations
+
+TBA
