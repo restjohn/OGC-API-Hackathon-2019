@@ -39,6 +39,6 @@ offline-capable mobile app.
 * Keep the https://github.com/opengeospatial/WFS_FES[OGC API - Features] repository up to date, including
 ** the https://app.swaggerhub.com/apis/cholmesgeo/WFS3/M1[SwaggerHub] referenced from the https://github.com/opengeospatial/WFS_FES/blob/master/README.md#using-the-standard[README]
 ** the local https://github.com/opengeospatial/WFS_FES/blob/master/openapi.yaml[yaml] documents
-* Improved documentation on the use of the CRS extension
-* Improved documentation on the use of Accept in the HTTP request header and how it relates to the f parameter in next links
+* Improve the documentation on CRS extension usage
+* Improve the documentation on usage of the Accept request HTTP header and how it relates to the f parameter in next response links
 * Validate the https://github.com/opengeospatial/WFS_FES/blob/master/implementations.md[referenced implementations] against the current specification
