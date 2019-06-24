@@ -2,10 +2,10 @@
 === U.S. National Geospatial-Intelligence Agency, GEOINT Services, Mobile Apps
 
 Developers::
-Brian Osborn:::
-    Author of NGA's https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile apps and by many other developers world-wide
-Robert St. John:::
-    Developer on NGA's https://github.com/ngageoint/MAGE[MAGE]
+https://github.com/bosborn[Brian Osborn]:::
+    Author of NGA's published open source https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile applications
+https://github.com/restjohn[Robert St. John]:::
+    Developer on NGA's open source https://github.com/ngageoint/MAGE[MAGE] mobile, server, and web applications
 
 ==== Motivation to Participate
 
