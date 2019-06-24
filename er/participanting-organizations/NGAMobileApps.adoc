@@ -18,13 +18,13 @@ offline-capable mobile app.
 
 ==== Implemented Solution
 
-* MAGE server OGC API - Features: https://github.com/ngageoint/mage-server/tree/wfs3
-* OGC OpenAPI Features JSON - https://github.com/ngageoint/openapi-features-json-java
-** Extends Simple Features GeoJSON - https://github.com/ngageoint/simple-features-geojson-java/tree/develop
+* https://github.com/ngageoint/mage-server/tree/wfs3[MAGE server OGC API - Features]
+* https://github.com/ngageoint/openapi-features-json-java[OGC OpenAPI Features JSON]
+** Extends https://github.com/ngageoint/simple-features-geojson-java/tree/develop[Simple Features GeoJSON]
 * GeoPackage Feature generator
-** https://github.com/ngageoint/geopackage-core-java/tree/develop/src/main/java/mil/nga/geopackage/features
-** https://github.com/ngageoint/geopackage-java/tree/develop/src/main/java/mil/nga/geopackage/features
-** https://github.com/ngageoint/geopackage-android/tree/develop/geopackage-sdk/src/main/java/mil/nga/geopackage/features
+** https://github.com/ngageoint/geopackage-core-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Core]
+** https://github.com/ngageoint/geopackage-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Java]
+** https://github.com/ngageoint/geopackage-android/tree/develop/geopackage-sdk/src/main/java/mil/nga/geopackage/features[GeoPackage Android]
 
 ==== Proposed Alternatives
 
