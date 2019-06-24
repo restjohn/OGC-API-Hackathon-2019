@@ -2,32 +2,43 @@
 === U.S. National Geospatial-Intelligence Agency, GEOINT Services, Mobile Apps
 
 Developers::
-Brian Osborn:::
-    Author of NGA's https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile apps and by many other developers world-wide
-Robert St. John:::
-    Developer on NGA's https://github.com/ngageoint/MAGE[MAGE]
+https://github.com/bosborn[Brian Osborn]:::
+    Author of NGA's published open source https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile applications
+https://github.com/restjohn[Robert St. John]:::
+    Developer on NGA's open source https://github.com/ngageoint/MAGE[MAGE] mobile, server, and web applications
 
 ==== Motivation to Participate
 
 * Assess the feasibility of implementing OGC's new OpenAPI-based
 Features API as native operations in the MAGE server to expose MAGE data
 through a standard, interoperable API.
-* Assess the feasibility of impementing a consumer of OGC's new OpenAPI-based Features API that can build GeoPackages using standard feature
+* Assess the feasibility of implementing a consumer of OGC's new OpenAPI-based Features API that can build GeoPackages using standard feature
 data from multiple different services for offline use in MAGE and any other
 offline-capable mobile app.
 
 ==== Implemented Solution
 
-MAGE server OGC API - Features: https://github.com/ngageoint/mage-server/tree/wfs3
+* https://github.com/ngageoint/mage-server/tree/wfs3[MAGE server OGC API - Features]
+* https://github.com/ngageoint/openapi-features-json-java[OGC OpenAPI Features JSON]
+** Extends https://github.com/ngageoint/simple-features-geojson-java/tree/develop[Simple Features GeoJSON]
+* GeoPackage Feature generator
+** https://github.com/ngageoint/geopackage-core-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Core]
+** https://github.com/ngageoint/geopackage-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Java]
+** https://github.com/ngageoint/geopackage-android/tree/develop/geopackage-sdk/src/main/java/mil/nga/geopackage/features[GeoPackage Android]
 
 ==== Proposed Alternatives
 
-TBA
+* None
 
 ==== Experiences with OGC API Specifications
 
-TBA
+* The https://github.com/opengeospatial/WFS_FES[OGC API - Features repository] reuse of the https://www.opengeospatial.org/standards/sfa[Simple Features specification] was helpful.
 
 ==== Other Impressions & Recommendations
 
-TBA
+* Keep the https://github.com/opengeospatial/WFS_FES[OGC API - Features] repository up to date, including
+** the https://app.swaggerhub.com/apis/cholmesgeo/WFS3/M1[SwaggerHub] referenced from the https://github.com/opengeospatial/WFS_FES/blob/master/README.md#using-the-standard[README]
+** the local https://github.com/opengeospatial/WFS_FES/blob/master/openapi.yaml[yaml] documents
+* Improve the documentation on CRS extension usage
+* Improve the documentation on usage of the Accept request HTTP header and how it relates to the f parameter in next response links
+* Validate the https://github.com/opengeospatial/WFS_FES/blob/master/implementations.md[referenced implementations] against the current specification
