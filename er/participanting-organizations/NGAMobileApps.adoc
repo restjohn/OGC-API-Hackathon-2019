@@ -19,7 +19,7 @@ offline-capable mobile app.
 ==== Implemented Solution
 
 * https://github.com/ngageoint/mage-server/tree/wfs3[MAGE server OGC API - Features]
-* https://github.com/ngageoint/openapi-features-json-java[OGC OpenAPI Features JSON]
+* https://github.com/ngageoint/ogc-api-features-json-java[OGC API Features JSON]
 ** Extends https://github.com/ngageoint/simple-features-geojson-java/tree/develop[Simple Features GeoJSON]
 * GeoPackage Feature generator
 ** https://github.com/ngageoint/geopackage-core-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Core]
