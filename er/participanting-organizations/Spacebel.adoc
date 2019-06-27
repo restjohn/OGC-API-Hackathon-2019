@@ -33,6 +33,8 @@ Spacebel has experience with Swagger and OpenAPI since 2016 and already used thi
 
 Wrapping an OpenSearch compliant catalog with an OGC API Common interface was achieved as part of the hackaton.  Extending the interface to OGC API Features (mainly temporal and geograpical searches) is future work.
 
+The main issue encountered was to define what /collections (which has a fixed response) format might return in the case of an OpenSearch catalog hosting EO application and service metadata, EO collection metadata and EO product metadata simultaneously.  The proposed approach can be seen at https://databio.spacebel.be/eo-catalog/collections.  The hyperlinks included in this response allow to refer directly to an OpenSearch OSDD (rel="search") and to the applicable JSON Schemas (rel="describedby").
+
 The figure below shows that service and application data could be sucessfully discovered via the OpenSphere client accessing the DataBio Catalog Server.
 
 [#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
@@ -44,6 +46,7 @@ The OpenSpere client also allows browsing EO Product metadata, visualise corresp
 [#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
 .EO Product metadata (OGC 17-003) shown in OpenSphere
 image::../images/spacebel-2.png[align="center"]
+
 
 ===== OGC API for Processes 
 
@@ -76,7 +79,7 @@ paths:
 
 A complete report about the mapping between the Process Description specification and the JSON Schema format is available at https://github.com/spacebel/testbed14/wiki/OGC-Hackaton-2019.
 
-Others topics habe also been covered during the Hackaton:
+Others topics have also been covered during the Hackaton:
 
 * The transactional extension specification has been submitted to the offical github repository at https://github.com/opengeospatial/wps-rest-binding/commit/7bdee9df5652ad3a7ad13075c535b84f9b264d0b.
 * An extension supporting callbacks would allow a more modern pattern for monitoring the jobs status. Instead of observing (repeated polling), the client can be notified on the following event: onSuccess, onFailure, onUpdate. Spacebel has proposed a draft specification for such notification feature (relying on OpenAPI callbacks): https://github.com/opengeospatial/wps-rest-binding/commit/8cc2bdaf6483af7d8c5a85c7ad0a45b8e68cc4b6
