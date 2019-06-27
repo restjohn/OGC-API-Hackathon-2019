@@ -15,17 +15,36 @@ Since a lot of the developments of OGC API now are moving in a similar direction
 
 During the hackathon event in London we have first further speced out the OGC API - Coverages on the first day and then have implemented a number of back-end implementations. I personally have implemented a first implementation of the latest agreed on spec on the second day. The implemented solutions is available at: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/.
 This solution is based on the aforementioned openEO WCPS driver and has adopted some new REST endpoints considering OGC API - coverages.
+In particular:
+
+* /collections
+** lists all available collections within server. For this hackathon two collections have been hard-coded for demonstration purpose only: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections
+* /collections/{collectionid}
+** lists all available coverages in collections specified within server, including most essential meta data like spatial and temporal extent of all coverages: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2
+* /collections/{collectionid}/coverages
+** currently identical to /collections/{collectionid}: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2/coverages
+* /collections/{collectionid}/coverages/{coverageid}
+** this endpoint is supposed to deliver the actual coverage in it's native format or a specified format and subset via query parameters. In the current implementation however it is just delivering the meta data: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2/coverages/openEO_S2_32632_20m_L2A
+* /coverages
+** lists all available coverages, indepently of if they are belonging to a collections or not. This listing includes again most essential metadata like spatial and temporal extent of all coverages: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/coverages/
+* /coverages/{coverageid}
+** this endpoint gives actual access to the data included in a coverage. The following examples demonstrates also how query parameters can be used to limit to a specific subset along all available dimensions of the coverage and how a specific output format can be specified: http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/coverages/openEO_S2_32632_60m_L2A&format=json&subset=E(399960,419960)&subset=N(5090220,5100220)&subset=DATE(%222018-06-04%22). Available query parameters are:
+*** format
+**** available formats are listed at http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/output_formats
+*** subset
+**** works just like the original subset from WCS 2
+
 The existing driver works on top of an installation of rasdaman community edition, exposing both the already existing WCS 2 and it's extension WCPS 1. 
 
 ==== Proposed Alternatives
 
-TBA
+I personally don't see the need for /collections/{collectionid}/coverages and would just propose to use directly /collections/{collectionid}/{coverageid}. If collections can have different types of collections e.g. a feature collection and a coverage collection, would rather have this information delivered in the metadata of the collection with a type field.
 
 ==== Experiences with OGC API Specifications
 
-TBA
+The overall impression of the Hackathon was for me, that there still needs to be more integration between the different standards of the OGC API. The goal should not be to just "restify" the existing standards, but to create a new well defined suit of functionality that take the current state of available data and technology into account. Most importantly the data available today is multi-dimensional covering at least 3 ofter more dimensions and that should be considered everywhere in the API. Secondly, in order to make actual use of the enormous amount of data available today, one cannot simply download the data an then process everything on the client side. Processing should be performed as much as possible, where the data is, in order to avoid unecessary copies and unecessery delay due to long IO times. Finally processing should be as flexible as possible and allow for chaining of arbitrary functions or operations in order to allow a user to achieve whatever he wants with the data. Here I would greatly urge to look into how processing is designed in openEO (https://open-eo.github.io/openeo-api/v/0.4.1/index.html) with it's concept of a graph representation of workflows, that can contain any number of processes chained into arbitrarely complex graphs including even user defined functions, when necessary processes are not natively supported by a given back-end implementation.
 
 ==== Other Impressions & Recommendations
 
-TBA
+The concept of collections of coverages needs to be speced more precisely. In particular it needs to be discussed and decided if collections should have the same projection and underlying grid, or if they can have arbitrary projections and grids. In the latter case a defined behavior should be decided of how to access a collection as opposed to an individual coverage. Questions like how are we mosaicking and integrating data from coverages on the fly when belonging to same collections, need to be answered. Are re-sampling methods, blending and mosaicking decided implicetly by the back-end implementation or can those be selected by query parameters or other means as well? How do we deal with multi-temporal (or arbitrary n-dimensional) mosaicking and resampling?
 
