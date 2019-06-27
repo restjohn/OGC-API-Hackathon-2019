@@ -27,7 +27,7 @@ The Catalog Server combines an OpenSearch interface with GeoJSON responses (OGC 
 
 ==== Experiences with OGC API Specifications
 
-Spacebel has experience with Swagger and OpenAPI since 2016 and already used this in previous OGC Testbeds.  
+Spacebel has experience with Swagger and OpenAPI since 2016 and already used this technology in previous OGC Testbeds.  
 
 ===== OGC API Common 
 
