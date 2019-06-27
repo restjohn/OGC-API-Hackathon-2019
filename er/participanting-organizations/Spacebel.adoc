@@ -11,7 +11,7 @@ Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020
 
 [#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
 .DataBio Catalog Server test page
-image::images/spacebel-0.png[align="center"]
+image::../images/spacebel-0.png[align="center"]
 
 In addition, Spacebel was also present in London to participate with ESA support to the OGC API Processes activities contributing an OGC API Processes implementation (Proxy).
 
@@ -36,11 +36,11 @@ The following screenshots show that service and application data and EO product 
 
 [#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
 .EO Service and Application metadata (OGC 19-020) from DataBio and OGC Testbed-15 shown in OpenSphere
-image::images/spacebel-1.png[align="center"]
+image::../images/spacebel-1.png[align="center"]
 
 [#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
 .EO Product metadata (OGC 17-003) shown in OpenSphere
-image::images/spacebel-2.png[align="center"]
+image::../images/spacebel-2.png[align="center"]
 
 ==== Other Impressions & Recommendations
 
