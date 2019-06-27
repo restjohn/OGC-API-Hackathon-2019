@@ -4,7 +4,7 @@
 
 ==== Motivation to Participate
 
-Spacebel was present in London to participate with ESA support to the OGC API for Processes activities contributing an OGC API Processes implementation (Proxy).
+Spacebel was present in London to participate to the OGC API for Processes activities contributing an OGC API Processes implementation (Proxy).
 
 In addition, Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020 DataBio project] contributing a Catalog Server implementation hosting application and collection metadata from the DataBio Hub (https://www.databiohub.eu/registry/) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.
 
