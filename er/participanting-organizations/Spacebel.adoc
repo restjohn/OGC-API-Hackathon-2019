@@ -18,7 +18,7 @@ In addition, Spacebel was also present in London to participate with ESA support
 parameter needed to be added server-side in addition to the `maximumRecords` parameter (which was used to comply with OASIS searchRetrieve (SRU) specifications) which was originally mapped on `{count}`.
 
 
-(2) Web Processing Service (http://34.77.240.214/ades-proxy/swagger-ui/index.html) with a OGC API for Processing as defined in OGC Testbed 14 (https://raw.githubusercontent.com/spacebel/testbed14/master/json-spec/wps-t_tb14_spacebel-v1.6.yaml), including the Transactional and the Quoting & Billing extensions. Resources `/`, `/conformance`, `/processes`, `/jobs`were implemented and itneroperability was shown through TIE testing with the Solenix client.
+(2) Web Processing Service (http://34.77.240.214/ades-proxy/swagger-ui/index.html) with a OGC API for Processing as defined in OGC Testbed 14 (https://raw.githubusercontent.com/spacebel/testbed14/master/json-spec/wps-t_tb14_spacebel-v1.6.yaml), including the Transactional and the Quoting & Billing extensions. Resources `/`, `/conformance`, `/processes`, `/jobs`were implemented and interoperability was shown through TIE testing with the Solenix client.
 
 
 ==== Proposed Alternatives
