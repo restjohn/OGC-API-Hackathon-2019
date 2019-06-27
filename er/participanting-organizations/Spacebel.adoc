@@ -2,9 +2,6 @@
 === Spacebel
 
 
-
-TBA
-
 ==== Motivation to Participate
 
 Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020 DataBio project] contributing a Catalog Server implementation hosting application and dataset metadata from the DataBio Hub (https://www.databiohub.eu/registry/) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.
@@ -26,7 +23,7 @@ parameter needed to be added server-side in addition to the `maximumRecords` par
 
 ==== Proposed Alternatives
 
-TBA
+The Catalog Server combines an OpenSearch interface with GeoJSON responses (OGC 13-026r8, OGC 17-047) for simple clients and a more advanced OpenAPI-based interface.
 
 ==== Experiences with OGC API Specifications
 
@@ -49,3 +46,5 @@ Further alignment of the OpenSearch Catalog Server with OGC API Features interfa
 The approach to represent links in JSON is unfortunately different that the encoding proposed by OGC 14-055r2 which means that an OpenSearch implemention based simultaneously on OGC 14-055r2 and OGC 17-047 in combination with OGC API Common will have different encodings for links in search responses and in other resource representations (e.g. `/conformance`, `/` etc).
 
 The OGC API specifications are imposing to advertise "paths" in the Landing Page response and also contain wording suggesting that actual path names such as "api", "conformance", "collections" are mandatory and not just examples.  This should be made clearer and it seems redundant to impose the declaration of paths in the landing page if indeed the path names are "fixed".
+
+OpenSearch and OpenAPI Common convergence would benefit from a revision of OGC 10-032r8 to ensure that the geo:box, time:start and time:end can be combined in a single URL template with the actual parameter names imposed by OpenAPI Common for temporal and geographical search.
