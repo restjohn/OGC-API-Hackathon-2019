@@ -4,13 +4,14 @@
 
 ==== Motivation to Participate
 
-Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020 DataBio project] contributing a Catalog Server implementation hosting application and dataset metadata from the DataBio Hub (https://www.databiohub.eu/registry/) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.
+Spacebel was present in London to participate with ESA support to the OGC API for Processes activities contributing an OGC API Processes implementation (Proxy).
+
+In addition, Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020 DataBio project] contributing a Catalog Server implementation hosting application and collection metadata from the DataBio Hub (https://www.databiohub.eu/registry/) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.
 
 [#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
 .DataBio Catalog Server test page
 image::../images/spacebel-0.png[align="center"]
 
-In addition, Spacebel was also present in London to participate with ESA support to the OGC API for Processes activities contributing an OGC API Processes implementation (Proxy).
 
 ==== Implemented Solution
 
