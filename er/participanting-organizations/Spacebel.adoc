@@ -9,11 +9,20 @@ TBA
 
 Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020 DataBio project] contributing a Catalog Server implementation hosting application and dataset metadata from the DataBio Hub (https://www.databiohub.eu/registry/) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.
 
+[#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
+.DataBio Catalog Server test page
+image::images/spacebel-0.png[align="center"]
+
 In addition, Spacebel was also present in London to participate with ESA support to the OGC API Processes activities contributing an OGC API Processes implementation (Proxy).
 
 ==== Implemented Solution
 
-Catalog Server (https://databio.spacebel.be/eo-catalog/readme.html) hosting EO applications and services (OGC 19-020), EO collections (OGC 17-084) and EO product (OGC 17-003) metadata implementing OpenSearch (OGC 10-032r8 and OGC 13-026r8) and Open API Common interfaces.  Resources `/`, `/conformance`, `/collections` were implemented and interoperability was demonstrated through TIE testing with the http://frozen-lime.surge.sh/[OpenSphere client] implementing OGC API Features provided by another participant.
+DataBio Catalog Server (https://databio.spacebel.be/eo-catalog/readme.html) hosting EO applications and services (OGC 19-020), EO collections (OGC 17-084) and EO product (OGC 17-003) metadata implementing OpenSearch (OGC 10-032r8 and OGC 13-026r8) and Open API Common interfaces.  Resources `/`, `/conformance`, `/collections` were implemented and interoperability was demonstrated through TIE testing with the http://frozen-lime.surge.sh/[OpenSphere client] implementing OGC API Features provided by another participant. A `limit`
+parameter needed to be added server-side in addition to the `maximumRecords` parameter (which was used to comply with OASIS searchRetrieve (SRU) specifications) which was originally mapped on `{count}`.
+
+
+
+
 
 ==== Proposed Alternatives
 
@@ -21,7 +30,17 @@ TBA
 
 ==== Experiences with OGC API Specifications
 
-TBA
+Spacebel has experience with Swagger and OpenAPI since 2016 and already used this in previous OGC Testbeds.  Wrapping an OpenSearch compliant catalog with an OGC API Common interface was achieved as part of the hackaton.  Extending the interface to OGC API Features (mainly temporal and geograpical searches) is future work.
+
+The following screenshots show that service and application data and EO product metadata could be sucessfully discovered via the OpenSphere client accessing the DataBio Catalog Server.
+
+[#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
+.EO Service and Application metadata (OGC 19-020) from DataBio and OGC Testbed-15 shown in OpenSphere
+image::images/spacebel-1.png[align="center"]
+
+[#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
+.EO Product metadata (OGC 17-003) shown in OpenSphere
+image::images/spacebel-2.png[align="center"]
 
 ==== Other Impressions & Recommendations
 
