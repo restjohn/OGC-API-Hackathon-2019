@@ -10,7 +10,7 @@ Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020
 .DataBio Catalog Server test page
 image::../images/spacebel-0.png[align="center"]
 
-In addition, Spacebel was also present in London to participate with ESA support to the OGC API Processes activities contributing an OGC API Processes implementation (Proxy).
+In addition, Spacebel was also present in London to participate with ESA support to the OGC API for Processes activities contributing an OGC API Processes implementation (Proxy).
 
 ==== Implemented Solution
 
@@ -18,7 +18,7 @@ In addition, Spacebel was also present in London to participate with ESA support
 parameter needed to be added server-side in addition to the `maximumRecords` parameter (which was used to comply with OASIS searchRetrieve (SRU) specifications) which was originally mapped on `{count}`.
 
 
-(2) Web Processing Service (http://34.77.240.214/ades-proxy/swagger-ui/index.html) with a OGC API for Processing as defined in OGC Testbed 14 (https://raw.githubusercontent.com/spacebel/testbed14/master/json-spec/wps-t_tb14_spacebel-v1.6.yaml), including the Transactional and the Quoting & Billing extensions. Resources `/`, `/conformance`, `/processes`, `/jobs`were implemented and interoperability was shown through TIE testing with the Solenix client.
+(2) Web Processing Service (http://34.77.240.214/ades-proxy/swagger-ui/index.html) with a OGC API for Processes as defined in OGC Testbed 14 (https://raw.githubusercontent.com/spacebel/testbed14/master/json-spec/wps-t_tb14_spacebel-v1.6.yaml), including the Transactional and the Quoting & Billing extensions. Resources `/`, `/conformance`, `/processes`, `/jobs`were implemented and interoperability was shown through TIE testing with the Solenix client.
 
 
 ==== Proposed Alternatives
@@ -45,7 +45,7 @@ The OpenSpere client also allows browsing EO Product metadata, visualise corresp
 .EO Product metadata (OGC 17-003) shown in OpenSphere
 image::../images/spacebel-2.png[align="center"]
 
-===== OGC API for Processing 
+===== OGC API for Processes 
 
 A major discussion during the OGC Hackaton 2019 (London) was about describing the process interfaces (i.e. the Process Description including inputs and outputs definitions) directly in JSON Schema and/or OpenAPI. Indeed, as OpenAPI already supports descriptions of schemas/interfaces, this would remove the need of using a specific Process Description schema, and this would also ease the work of Web client developers.
 
@@ -87,18 +87,12 @@ Others topics habe also been covered during the Hackaton:
 
 Further alignment of the OpenSearch Catalog Server with OGC API Features interfaces, requires reconciling the time and bbox related search parameters from OGC 10-032 and OGC API Features.  While OGC 10-032r8 has separate search parameters representing the start and end of a search interval `{time:start}` and `{time:end}` respectively, OGC API Features imposes a single search parameter to represent the interval.  
 
-The approach to represent links in JSON is unfortunately different that the encoding proposed by OGC 14-055r2 which means that an OpenSearch implemention based simultaneously on OGC 14-055r2 and OGC 17-047 in combination with OGC API Common will have different encodings for links in search responses and in other resource representations (e.g. `/conformance`, `/` etc).
-
-The OGC API specifications are imposing to advertise "paths" in the Landing Page response and also contain wording suggesting that actual path names such as "api", "conformance", "collections" are mandatory and not just examples.  This should be made clearer and it seems redundant to impose the declaration of paths in the landing page if indeed the path names are "fixed".
-
-==== Other Impressions & Recommendations
-
-Further alignment of the OpenSearch Catalog Server with OGC API Features interfaces, requires reconciling the time and bbox related search parameters from OGC 10-032 and OGC API Features.  While OGC 10-032r8 has separate search parameters representing the start and end of a search interval `{time:start}` and `{time:end}` respectively, OGC API Features imposes a single search parameter to represent the interval.  
-
-OpenSearch and OpenAPI Common convergence would benefit from a revision of OGC 10-032r8 to ensure that the geo:box, time:start and time:end can be combined in a single URL template with the actual parameter names imposed by OpenAPI Common for temporal and geographical search.
+OpenSearch and OpenAPI Common convergence would benefit from a revision of OGC 10-032r8 to ensure that the geo:box, time:start and time:end can be combined in a single URL template with the actual HTTP query parameter names imposed by OpenAPI Common for temporal and geographical search.
 
 The approach to represent hyperlinks in JSON is unfortunately different from the encoding proposed by OGC 14-055r2 which means that an OpenSearch implemention based simultaneously on OGC 14-055r2 and OGC 17-047 in combination with OGC API Common will have different encodings for links in search responses and in other resource representations (e.g. `/conformance`, `/` etc).
 
 The OGC API specifications are imposing to advertise "paths" in the Landing Page response and also contain wording suggesting that actual path names such as "api", "conformance", "collections" are mandatory and not just examples.  This should be made clearer and it seems redundant to impose the declaration of paths in the landing page if indeed the path names are "fixed".
+
+Making (JSON) data models available as separate JSON Schemas (https://swagger.io/docs/specification/data-models/keywords/) and not mixing them with actual OpenAPI descriptions (but refer to them) would allow validating JSON representations separately with JSON schema validation tools and before a service is put up.
 
 
