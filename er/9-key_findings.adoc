@@ -17,7 +17,7 @@ During the hackathon, the process involved alternation between briefings, discus
 
 ==== Organization
 
-By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses, with the spread of interest as shown in <<img_interests>>.
+By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses. The spread of responses to the hackathon is shown in <<img_interests>>.
 
 [#img_interests,reftext='{figure-caption} {counter:figure-num}']
 .Participants' interests
@@ -44,17 +44,33 @@ The deployed technologies includes software implemented in Python, Java, and Nod
 
 ==== Information
 
-TBA
+===== Communication
+
+A key aspect of executing a hackathon is the communication within and between the participating teams. A number of communication tools were used within the OGC API Hackathon to facilitate communication.
+
+* OGC Portal: Used for event planning.
+* Gitter: Used for communication relating to technical information, due to its close integration with Github.
+* Github: Used for logging issues and sharing documents (including the engineering report) across teams.
+* OGC Mailing list: Used for sharing administrative information with all participants ahead of the hackathon.
+* Gotomeeting: Used for the pre-event webinar and for teleconferencing with remote participants during the hackathon.
+
+NOTE: The Ordnance Survey provided the Microsoft Teams platform for supporting participants that had requested access to the Ordnance Survey Cloud.
+
+===== Knowledge Capture
+
+The various teams involved in the hackathon used the Github repositories of their relevant OGC API specifications to log issues that were identified during discussions. Note that the hackathon took place at the end of the week, and thus some of the participants were only able to log issues at the beginning of the week after the hackathon. <<img_issues>> presents a graph of the total number of issues logged in Github repositories on the lead up to the hackathon event, during the event and the week after the event. The effect of the hackathon is clearly visible from the 'spike' in the number of issues logged during the two days of the hackathon event (i.e. June 20th & 21st).
+
+[#img_issues,reftext='{figure-caption} {counter:figure-num}']
+.The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages
+image::images/issues.png[width=800,align="center"]
+
+Changes to the OGC API specifications were made on the lead up to the hackathon, and during the event. <<img_commits>> presents the total number of commits in Github repositories for OGC APIs on the lead up to the hackathon event, during the event and the week after the event. The commits represent more than 4600 additions and 3200 deletions to the draft API specifications.
 
 [#img_commits,reftext='{figure-caption} {counter:figure-num}']
 .The total number of commits made to Github repositories for Processes, Map Tiles, Common and Coverages
 image::images/commits.png[width=800,align="center"]
 
-TBA
-
-[#img_issues,reftext='{figure-caption} {counter:figure-num}']
-.The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages
-image::images/issues.png[width=800,align="center"]
+It should be noted that although the hackathon resulted in additions and deletions to the draft API specifications, the outputs of the hackathon are subject to vetting and approval processes of the relevant OGC Standards Working Groups. Therefore there is always the possibility that the Standards Working Groups may reject all of the outputs of the hackathon. To an extent, such an outcome is mitigated by the participation of several members of the Standards Working Group in the hackathon. Further, appointing the editors of the OGC API specifications as the Team Leads of the hackathon appeared to improve the likelihood of acceptance of changes made during the hackathon.
 
 === Experiences
 
