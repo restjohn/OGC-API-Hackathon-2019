@@ -8,9 +8,9 @@ Spacebel was present in London to participate to the OGC API for Processes activ
 
 In addition, Spacebel participated remotely on behalf of the https://www.databio.eu/en/[H2020 DataBio project] contributing a Catalog Server implementation hosting application and collection metadata from the DataBio Hub (https://www.databiohub.eu/registry/) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.
 
-[#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
+[#img_databio,reftext='{figure-caption} {counter:figure-num}']
 .DataBio Catalog Server test page
-image::../images/spacebel-0.png[align="center"]
+image::images/spacebel-0.png[align="center"]
 
 
 ==== Implemented Solution
@@ -28,9 +28,9 @@ The Catalog Server combines an OpenSearch interface with GeoJSON responses (OGC 
 
 ==== Experiences with OGC API Specifications
 
-Spacebel has experience with Swagger and OpenAPI since 2016 and already used this technology in previous OGC Testbeds.  
+Spacebel has experience with Swagger and OpenAPI since 2016 and already used this technology in previous OGC Testbeds.
 
-===== OGC API Common 
+===== OGC API Common
 
 Wrapping an OpenSearch compliant catalog with an OGC API Common interface was achieved as part of the hackaton.  Extending the interface to OGC API Features (mainly temporal and geograpical searches) is future work.
 
@@ -38,18 +38,18 @@ The main issue encountered was to define what /collections (which has a fixed re
 
 The figure below shows that service and application data could be sucessfully discovered via the OpenSphere client accessing the DataBio Catalog Server.
 
-[#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
+[#img_eo_service_metadata,reftext='{figure-caption} {counter:figure-num}']
 .EO Service and Application metadata (OGC 19-020) from DataBio and OGC Testbed-15 shown in OpenSphere
-image::../images/spacebel-1.png[align="center"]
+image::images/spacebel-1.jpg[align="center"]
 
 The OpenSpere client also allows browsing EO Product metadata, visualise corresponding footprints on the map and display metadata properties for a particular EO Product.
 
-[#img_object_openapi,reftext='{figure-caption} {counter:figure-num}']
+[#img_eo_product_metadata,reftext='{figure-caption} {counter:figure-num}']
 .EO Product metadata (OGC 17-003) shown in OpenSphere
-image::../images/spacebel-2.png[align="center"]
+image::images/spacebel-2.jpg[align="center"]
 
 
-===== OGC API for Processes 
+===== OGC API for Processes
 
 A major discussion during the OGC Hackaton 2019 (London) was about describing the process interfaces (i.e. the Process Description including inputs and outputs definitions) directly in JSON Schema and/or OpenAPI. Indeed, as OpenAPI already supports descriptions of schemas/interfaces, this would remove the need of using a specific Process Description schema, and this would also ease the work of Web client developers.
 
@@ -89,7 +89,7 @@ Others topics have also been covered during the Hackaton:
 
 ==== Other Impressions & Recommendations
 
-Further alignment of the OpenSearch Catalog Server with OGC API Features interfaces, requires reconciling the time and bbox related search parameters from OGC 10-032 and OGC API Features.  While OGC 10-032r8 has separate search parameters representing the start and end of a search interval `{time:start}` and `{time:end}` respectively, OGC API Features imposes a single search parameter to represent the interval.  
+Further alignment of the OpenSearch Catalog Server with OGC API Features interfaces, requires reconciling the time and bbox related search parameters from OGC 10-032 and OGC API Features.  While OGC 10-032r8 has separate search parameters representing the start and end of a search interval `{time:start}` and `{time:end}` respectively, OGC API Features imposes a single search parameter to represent the interval.
 
 OpenSearch and OpenAPI Common convergence would benefit from a revision of OGC 10-032r8 to ensure that the geo:box, time:start and time:end can be combined in a single URL template with the actual HTTP query parameter names imposed by OpenAPI Common for temporal and geographical search.
 
@@ -98,5 +98,3 @@ The approach to represent hyperlinks in JSON is unfortunately different from the
 The OGC API specifications are imposing to advertise "paths" in the Landing Page response and also contain wording suggesting that actual path names such as "api", "conformance", "collections" are mandatory and not just examples.  This should be made clearer and it seems redundant to impose the declaration of paths in the landing page if indeed the path names are "fixed".
 
 Making (JSON) data models available as separate JSON Schemas (https://swagger.io/docs/specification/data-models/keywords/) and not mixing them with actual OpenAPI descriptions (but refer to them) would allow validating JSON representations separately with JSON schema validation tools and before a service is put up.
-
-

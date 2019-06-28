@@ -800,28 +800,28 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 </ul>
 </li>
-<li><a href="#KeyFindings">9. Key Findings</a>
+<li><a href="#Results">9. Results</a>
 <ul class="sectlevel2">
-<li><a href="#_results">9.1. Results</a>
-<ul class="sectlevel3">
-<li><a href="#_ogc_api_processes_2">9.1.1. OGC API - Processes</a></li>
-<li><a href="#_ogc_api_map_tiles_2">9.1.2. OGC API - Map Tiles</a></li>
-<li><a href="#_ogc_api_coverages_2">9.1.3. OGC API - Coverages</a></li>
-<li><a href="#_ogc_api_common_2">9.1.4. OGC API - Common</a></li>
-<li><a href="#_technology_integration_experiments_tie">9.1.5. Technology Integration Experiments (TIE)</a></li>
+<li><a href="#_ogc_api_processes_2">9.1. OGC API - Processes</a></li>
+<li><a href="#_ogc_api_map_tiles_2">9.2. OGC API - Map Tiles</a></li>
+<li><a href="#_ogc_api_coverages_2">9.3. OGC API - Coverages</a></li>
+<li><a href="#_ogc_api_common_2">9.4. OGC API - Common</a></li>
+<li><a href="#_technology_integration_experiments_tie">9.5. Technology Integration Experiments (TIE)</a></li>
 </ul>
 </li>
-<li><a href="#_what_occurred">9.2. What occurred</a>
+<li><a href="#KeyFindings">10. Key Findings</a>
+<ul class="sectlevel2">
+<li><a href="#_what_occurred">10.1. What occurred</a>
 <ul class="sectlevel3">
-<li><a href="#_processes">9.2.1. Processes</a></li>
-<li><a href="#_organization">9.2.2. Organization</a></li>
-<li><a href="#_technology">9.2.3. Technology</a></li>
-<li><a href="#_information">9.2.4. Information</a></li>
+<li><a href="#_processes">10.1.1. Processes</a></li>
+<li><a href="#_organization">10.1.2. Organization</a></li>
+<li><a href="#_technology">10.1.3. Technology</a></li>
+<li><a href="#_information">10.1.4. Information</a></li>
 </ul>
 </li>
-<li><a href="#_experiences">9.3. Experiences</a></li>
-<li><a href="#_lessons_learnt">9.4. Lessons learnt</a></li>
-<li><a href="#_what_are_the_next_steps">9.5. What are the next steps?</a></li>
+<li><a href="#_experiences">10.2. Experiences</a></li>
+<li><a href="#_lessons_learnt">10.3. Lessons learnt</a></li>
+<li><a href="#_what_are_the_next_steps">10.4. What are the next steps?</a></li>
 </ul>
 </li>
 <li><a href="#OGCAPIImplementations">Appendix A: Implementations of OGC APIs</a>
@@ -2877,15 +2877,13 @@ Until the OGC API standards are stable and formally adopted, it is not feasible 
 </div>
 </div>
 <div class="sect1">
-<h2 id="KeyFindings"><a class="anchor" href="#KeyFindings"></a>9. Key Findings</h2>
+<h2 id="Results"><a class="anchor" href="#Results"></a>9. Results</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section presents the key findings from the Hackathon.</p>
+<p>This section presents results from the Hackathon.</p>
 </div>
 <div class="sect2">
-<h3 id="_results"><a class="anchor" href="#_results"></a>9.1. Results</h3>
-<div class="sect3">
-<h4 id="_ogc_api_processes_2"><a class="anchor" href="#_ogc_api_processes_2"></a>9.1.1. OGC API - Processes</h4>
+<h3 id="_ogc_api_processes_2"><a class="anchor" href="#_ogc_api_processes_2"></a>9.1. OGC API - Processes</h3>
 <div class="paragraph">
 <p>The participants made an observation that some attributes for referenceValue were missing. As a result, changes were made to add attributes for identifying the MIME type, schema and encoding in a referenceValue object. These changes were needed for providing input in a specific format or returning output in a specific format.</p>
 </div>
@@ -2905,8 +2903,8 @@ Until the OGC API standards are stable and formally adopted, it is not feasible 
 <p>There was a <a href="https://github.com/opengeospatial/wps-rest-binding/issues/32">suggestion</a> to add the exception information to the status information at GET <code>/processes/{id}/jobs/{jobID}</code> and remove the GET <code>/processes/{id}/jobs/{jobID}/exception</code> endpoint. The participants considered whether an HTTP 201 code should be returned with POST /processes/{id}/jobs. The participants resolved that allowing for plural form results could address this issue, for example <code>processes/{processId}/jobs/{jobId}/results/{resultId}</code>. Use of an HTTP 201 code was however inconclusive.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_ogc_api_map_tiles_2"><a class="anchor" href="#_ogc_api_map_tiles_2"></a>9.1.2. OGC API - Map Tiles</h4>
+<div class="sect2">
+<h3 id="_ogc_api_map_tiles_2"><a class="anchor" href="#_ogc_api_map_tiles_2"></a>9.2. OGC API - Map Tiles</h3>
 <div class="paragraph">
 <p>The participants identified three roots for API building blocks, namely the root of the service, collection ID, and collection ID combined the coverage ID. A need to combine these root paths with maps and tiles was identified. There was an observation made that if the roots are combined with maps and tiles, there is an opportunity to provide much more information through data tiles such as vector tiles or coverage tiles. There was also an observation made that if a style and style id are concatenated with the path then the API would be able to combine data tiles with portrayals of the information. There was a third alternative identified, which is the concatenation of both the aforementioned approaches.</p>
 </div>
@@ -2916,9 +2914,18 @@ Until the OGC API standards are stable and formally adopted, it is not feasible 
 <div class="paragraph">
 <p>There was a discussion about whether the response for maps should return raster or vector maps. Related to this was whether a map was at the same level as a collection. There was agreement that maps are not at the same level as collections.</p>
 </div>
+<div class="paragraph">
+<p>There was a <a href="https://github.com/opengeospatial/OGC-API-Map-Tiles/issues/12">suggestion</a> to normalize the case used by attributes of the tileMatrix construct. Before the hackathon some of the attribute names where in UpperCamelCase whereas others were in lowerCamelCase. Normalizing the attribute names would ensure consistency of naming and thus make it easier for developers to implement.</p>
 </div>
-<div class="sect3">
-<h4 id="_ogc_api_coverages_2"><a class="anchor" href="#_ogc_api_coverages_2"></a>9.1.3. OGC API - Coverages</h4>
+<div class="paragraph">
+<p>There was also an <a href="https://github.com/opengeospatial/OGC-API-Map-Tiles/issues/13">observation</a> made that there is a need to determine where metadata fields supported by WMS could be applied in the OGC API - Map Tiles standard. The metadata fields supported by the WMS standard include: Name, Title, Abstract, KeywordList, Style, CRS, EX_GeographicBoundingBox, BoundingBox, Dimension, Attribution, AuthorityURL, Identifier, MetadataURL, DataURL, FeatureListURL, MinScaleDenominator, MaxScaleDenominator, queryable, cascaded, opaque, noSubsets, fixedWidth, and fixedHeight.</p>
+</div>
+<div class="paragraph">
+<p>The participants <a href="https://github.com/opengeospatial/OGC-API-Map-Tiles/issues/14">observed</a> that the extents and bounding box classes used by the OGC API - Map Tiles specification have been defined in different ways. The extent class defines a bounding extent as an array of numbers indicating  bounding coordinates, whereas the boundingBox class defines the bounding coordinates as separate attributes for the lower and upper corner coordinates.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ogc_api_coverages_2"><a class="anchor" href="#_ogc_api_coverages_2"></a>9.3. OGC API - Coverages</h3>
 <div class="paragraph">
 <p>The participants agreed that OGC API - Coverages should inherit from OGC API - Common as much as possible. This meant that wherever a requirement is specified in OGC API - Common, if it is relevant to coverages, the OGC API - Coverages specification would reference the requirement in the OGC API - Common specification.</p>
 </div>
@@ -2938,8 +2945,8 @@ Until the OGC API standards are stable and formally adopted, it is not feasible 
 <p>There was a discussion about whether parameters, values and URL bases were case sensitive. This issue was observed to be applicable to all of the specifications. There was a suggestion that the OGC API - Common specification should specify a rule for case sensitivity and that that rule should be consistent with the RFC.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_ogc_api_common_2"><a class="anchor" href="#_ogc_api_common_2"></a>9.1.4. OGC API - Common</h4>
+<div class="sect2">
+<h3 id="_ogc_api_common_2"><a class="anchor" href="#_ogc_api_common_2"></a>9.4. OGC API - Common</h3>
 <div class="paragraph">
 <p>There was a discussion about whether OGC API - Common should support the CRS:84 coordinate system (WGS84) by default. The participants observed that the collectionInfo metadata (returned for each collection) allows one to specify the CRS supported by the collection. The client can specify one of the other CRS if they do not support the default. For coverages, the default CRS was observed to be the native CRS. The participants concluded that there will be a default CRS for the API and the OGC API - Common specification should have complete control over the CRS and the default CRS should not constrain the resource.</p>
 </div>
@@ -2950,8 +2957,8 @@ Until the OGC API standards are stable and formally adopted, it is not feasible 
 <p>The participants observed that there is a need for something like CRS:84 that has ellipsoid height. EPSG:4327 was suggested as a possible basis for such a CRS, with the caveat that it has been deprecated. It was agreed to discuss the issue of a height or elevation CRS with the WFS SWG and the CRS DWG at the OGC TC meeting in Leuven.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_technology_integration_experiments_tie"><a class="anchor" href="#_technology_integration_experiments_tie"></a>9.1.5. Technology Integration Experiments (TIE)</h4>
+<div class="sect2">
+<h3 id="_technology_integration_experiments_tie"><a class="anchor" href="#_technology_integration_experiments_tie"></a>9.5. Technology Integration Experiments (TIE)</h3>
 <div class="paragraph">
 <p>The following table presents Technology Integration Experiments (TIE) that were completed during the Hackathon.</p>
 </div>
@@ -3086,10 +3093,17 @@ Services on rows and Clients on columns
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="KeyFindings"><a class="anchor" href="#KeyFindings"></a>10. Key Findings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section presents the key findings from the Hackathon.</p>
+</div>
 <div class="sect2">
-<h3 id="_what_occurred"><a class="anchor" href="#_what_occurred"></a>9.2. What occurred</h3>
+<h3 id="_what_occurred"><a class="anchor" href="#_what_occurred"></a>10.1. What occurred</h3>
 <div class="sect3">
-<h4 id="_processes"><a class="anchor" href="#_processes"></a>9.2.1. Processes</h4>
+<h4 id="_processes"><a class="anchor" href="#_processes"></a>10.1.1. Processes</h4>
 <div class="paragraph">
 <p>The decision to hold the OGC API Hackathon was made by the TC at the 2019 TC meeting in Singapore. Following this decision, OGC staff engaged a number of potential sponsors from the OGC membership. Having identified sponsors and hosts, a series of teleconferences were held for planning the event. These teleconferences discussed venue logistics, computing infrastructure, data, scenarios, catering and other topics. A Gantt chart of the planning and execution of the hackathon is shown in <a href="#img_gantt">Figure 4</a>.</p>
 </div>
@@ -3104,60 +3118,96 @@ Services on rows and Clients on columns
 </div>
 </div>
 <div class="sect3">
-<h4 id="_organization"><a class="anchor" href="#_organization"></a>9.2.2. Organization</h4>
+<h4 id="_organization"><a class="anchor" href="#_organization"></a>10.1.2. Organization</h4>
 <div class="paragraph">
-<p>By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications participants would focus on received 27 responses, with the spread of interest as showin in <a href="#img_interests_1">Figure 5</a>, <a href="#img_interests_2">Figure 6</a> and <a href="#img_interests_3">Figure 7</a>.</p>
+<p>By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses, with the spread of interest as shown in <a href="#img_interests">Figure 5</a>.</p>
 </div>
-<div id="img_interests_1" class="imageblock text-center">
+<div id="img_interests" class="imageblock text-center">
 <div class="content">
-<img src="images/interests_1.png" alt="interests 1" width="800">
+<img src="images/interests.png" alt="interests" width="800">
 </div>
-<div class="title">Figure 5. Participants' interests (1 of 3)</div>
-</div>
-<div id="img_interests_2" class="imageblock text-center">
-<div class="content">
-<img src="images/interests_2.png" alt="interests 2" width="800">
-</div>
-<div class="title">Figure 6. Participants' interests (2 of 3)</div>
-</div>
-<div id="img_interests_3" class="imageblock text-center">
-<div class="content">
-<img src="images/interests_3.png" alt="interests 3" width="800">
-</div>
-<div class="title">Figure 7. Participants' interests (3 of 3)</div>
+<div class="title">Figure 5. Participants' interests</div>
 </div>
 <div class="paragraph">
 <p>The hackathon was therefore organized around teams based on the OGC API specifications. Participants interested in APIs other than those for coverages, processes, and map tiles, were asked to contribute to the work on advancing the OGC API - Common specification. This would help ensure that the OGC API - Common specification provides an appropriate a base for all future OGC APIs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_technology"><a class="anchor" href="#_technology"></a>9.2.3. Technology</h4>
+<h4 id="_technology"><a class="anchor" href="#_technology"></a>10.1.3. Technology</h4>
 <div class="paragraph">
 <p>The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from  52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, and rasdaman. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.</p>
 </div>
 <div class="paragraph">
-<p>The deployed technologies includes software implemented in Python, Java, and NodeJS. Some of the deployed technologies includes Python adapters to software implemented in C++. This variety of programming languages shows that the OGC API specifications are independent of any programming language.</p>
+<p>As discussed in <a href="#Architecture">Architecture</a>, the software products that were deployed by the aforementioned organizations included:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pygeoapi</p>
+</li>
+<li>
+<p>52°North JavaPS</p>
+</li>
+<li>
+<p>Esri prototype facade on to ArcGIS Online tiled services</p>
+</li>
+<li>
+<p>rasdaman</p>
+</li>
+<li>
+<p>OpenSphere OGC API Plugin</p>
+</li>
+<li>
+<p>Hexagon LuciadLightspeed</p>
+</li>
+<li>
+<p>Solenix WPS Demo Client</p>
+</li>
+<li>
+<p>Esri OGC API-Tiles Demo Client</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The deployed technologies includes software implemented in Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in C++. This variety of programming languages shows that the OGC API specifications are independent of any programming language.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_information"><a class="anchor" href="#_information"></a>9.2.4. Information</h4>
-
+<h4 id="_information"><a class="anchor" href="#_information"></a>10.1.4. Information</h4>
+<div class="paragraph">
+<p>TBA</p>
+</div>
+<div id="img_commits" class="imageblock text-center">
+<div class="content">
+<img src="images/commits.png" alt="commits" width="800">
+</div>
+<div class="title">Figure 6. The total number of commits made to Github repositories for Processes, Map Tiles, Common and Coverages</div>
+</div>
+<div class="paragraph">
+<p>TBA</p>
+</div>
+<div id="img_issues" class="imageblock text-center">
+<div class="content">
+<img src="images/issues.png" alt="issues" width="800">
+</div>
+<div class="title">Figure 7. The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_experiences"><a class="anchor" href="#_experiences"></a>9.3. Experiences</h3>
+<h3 id="_experiences"><a class="anchor" href="#_experiences"></a>10.2. Experiences</h3>
 <div class="paragraph">
 <p>TBA</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_lessons_learnt"><a class="anchor" href="#_lessons_learnt"></a>9.4. Lessons learnt</h3>
+<h3 id="_lessons_learnt"><a class="anchor" href="#_lessons_learnt"></a>10.3. Lessons learnt</h3>
 <div class="paragraph">
 <p>TBA</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_what_are_the_next_steps"><a class="anchor" href="#_what_are_the_next_steps"></a>9.5. What are the next steps?</h3>
+<h3 id="_what_are_the_next_steps"><a class="anchor" href="#_what_are_the_next_steps"></a>10.4. What are the next steps?</h3>
 <div class="paragraph">
 <p>TBA</p>
 </div>
@@ -3914,25 +3964,116 @@ Since a lot of the developments of OGC API now are moving in a similar direction
 <div class="paragraph">
 <p>During the hackathon event in London we have first further speced out the OGC API - Coverages on the first day and then have implemented a number of back-end implementations. I personally have implemented a first implementation of the latest agreed on spec on the second day. The implemented solutions is available at: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/</a>.
 This solution is based on the aforementioned openEO WCPS driver and has adopted some new REST endpoints considering OGC API - coverages.
-The existing driver works on top of an installation of rasdaman community edition, exposing both the already existing WCS 2 and it&#8217;s extension WCPS 1.</p>
+In particular:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>/collections</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lists all available collections within server. For this hackathon two collections have been hard-coded for demonstration purpose only: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>/collections/{collectionid}</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lists all available coverages in collections specified within server, including most essential meta data like spatial and temporal extent of all coverages: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>/collections/{collectionid}/coverages</p>
+<div class="ulist">
+<ul>
+<li>
+<p>currently identical to /collections/{collectionid}: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2/coverages" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2/coverages</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>/collections/{collectionid}/coverages/{coverageid}</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this endpoint is supposed to deliver the actual coverage in it&#8217;s native format or a specified format and subset via query parameters. In the current implementation however it is just delivering the meta data: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2/coverages/openEO_S2_32632_20m_L2A" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/collections/Sentinel-2/coverages/openEO_S2_32632_20m_L2A</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>/coverages</p>
+<div class="ulist">
+<ul>
+<li>
+<p>lists all available coverages, indepently of if they are belonging to a collections or not. This listing includes again most essential metadata like spatial and temporal extent of all coverages: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/coverages/" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/coverages/</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>/coverages/{coverageid}</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this endpoint gives actual access to the data included in a coverage. The following examples demonstrates also how query parameters can be used to limit to a specific subset along all available dimensions of the coverage and how a specific output format can be specified: <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/coverages/openEO_S2_32632_60m_L2A&amp;format=json&amp;subset=E(399960,419960)&amp;subset=N(5090220,5100220)&amp;subset=DATE(%222018-06-04%22" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/coverages/openEO_S2_32632_60m_L2A&amp;format=json&amp;subset=E(399960,419960)&amp;subset=N(5090220,5100220)&amp;subset=DATE(%222018-06-04%22</a>). Available query parameters are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>format</p>
+<div class="ulist">
+<ul>
+<li>
+<p>available formats are listed at <a href="http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/output_formats" class="bare">http://saocompute.eurac.edu/openEO_WCPS_Driver/openeo/output_formats</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>subset</p>
+<div class="ulist">
+<ul>
+<li>
+<p>works just like the original subset from WCS 2</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The existing driver works on top of an installation of rasdaman community edition, exposing both the already existing WCS 2 and it&#8217;s extension WCPS 1.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_proposed_alternatives_21"><a class="anchor" href="#_proposed_alternatives_21"></a>A.21.3. Proposed Alternatives</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>I personally don&#8217;t see the need for /collections/{collectionid}/coverages and would just propose to use directly /collections/{collectionid}/{coverageid}. If collections can have different types of collections e.g. a feature collection and a coverage collection, would rather have this information delivered in the metadata of the collection with a type field.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_experiences_with_ogc_api_specifications_21"><a class="anchor" href="#_experiences_with_ogc_api_specifications_21"></a>A.21.4. Experiences with OGC API Specifications</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>The overall impression of the Hackathon was for me, that there still needs to be more integration between the different standards of the OGC API. The goal should not be to just "restify" the existing standards, but to create a new well defined suit of functionality that take the current state of available data and technology into account. Most importantly the data available today is multi-dimensional covering at least 3 ofter more dimensions and that should be considered everywhere in the API. Secondly, in order to make actual use of the enormous amount of data available today, one cannot simply download the data an then process everything on the client side. Processing should be performed as much as possible, where the data is, in order to avoid unecessary copies and unecessery delay due to long IO times. Finally processing should be as flexible as possible and allow for chaining of arbitrary functions or operations in order to allow a user to achieve whatever he wants with the data. Here I would greatly urge to look into how processing is designed in openEO (<a href="https://open-eo.github.io/openeo-api/v/0.4.1/index.html" class="bare">https://open-eo.github.io/openeo-api/v/0.4.1/index.html</a>) with it&#8217;s concept of a graph representation of workflows, that can contain any number of processes chained into arbitrarely complex graphs including even user defined functions, when necessary processes are not natively supported by a given back-end implementation.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_other_impressions_recommendations_21"><a class="anchor" href="#_other_impressions_recommendations_21"></a>A.21.5. Other Impressions &amp; Recommendations</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>The concept of collections of coverages needs to be speced more precisely. In particular it needs to be discussed and decided if collections should have the same projection and underlying grid, or if they can have arbitrary projections and grids. In the latter case a defined behavior should be decided of how to access a collection as opposed to an individual coverage. Questions like how are we mosaicking and integrating data from coverages on the fly when belonging to same collections, need to be answered. Are re-sampling methods, blending and mosaicking decided implicetly by the back-end implementation or can those be selected by query parameters or other means as well? How do we deal with multi-temporal (or arbitrary n-dimensional) mosaicking and resampling?</p>
 </div>
 </div>
 </div>
@@ -5279,37 +5420,140 @@ Test Suites and ongoing "in the open" standards development.</p>
 </div>
 <div class="sect2">
 <h3 id="Spacebel"><a class="anchor" href="#Spacebel"></a>A.55. Spacebel</h3>
-<div class="paragraph">
-<p>TBA</p>
-</div>
 <div class="sect3">
 <h4 id="_motivation_to_participate_55"><a class="anchor" href="#_motivation_to_participate_55"></a>A.55.1. Motivation to Participate</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>Spacebel was present in London to participate to the OGC API for Processes activities contributing an OGC API Processes implementation (Proxy).</p>
+</div>
+<div class="paragraph">
+<p>In addition, Spacebel participated remotely on behalf of the <a href="https://www.databio.eu/en/">H2020 DataBio project</a> contributing a Catalog Server implementation hosting application and collection metadata from the DataBio Hub (<a href="https://www.databiohub.eu/registry/" class="bare">https://www.databiohub.eu/registry/</a>) aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.</p>
+</div>
+<div id="img_databio" class="imageblock text-center">
+<div class="content">
+<img src="images/spacebel-0.png" alt="spacebel 0">
+</div>
+<div class="title">Figure 13. DataBio Catalog Server test page</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_implemented_solution_55"><a class="anchor" href="#_implemented_solution_55"></a>A.55.2. Implemented Solution</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>(1) DataBio Catalog Server (<a href="https://databio.spacebel.be/eo-catalog/readme.html" class="bare">https://databio.spacebel.be/eo-catalog/readme.html</a>) hosting EO applications and services (OGC 19-020), EO collections (OGC 17-084) and EO product (OGC 17-003) metadata implementing OpenSearch (OGC 10-032r8 and OGC 13-026r8) and Open API Common interfaces.  Resources <code>/</code>, <code>/conformance</code>, <code>/collections</code> were implemented and interoperability was demonstrated through TIE testing with the <a href="http://frozen-lime.surge.sh/">OpenSphere client</a> implementing OGC API Features provided by another participant. A <code>limit</code>
+parameter needed to be added server-side in addition to the <code>maximumRecords</code> parameter (which was used to comply with OASIS searchRetrieve (SRU) specifications) which was originally mapped on <code>{count}</code>.</p>
+</div>
+<div class="paragraph">
+<p>(2) Web Processing Service (<a href="http://34.77.240.214/ades-proxy/swagger-ui/index.html" class="bare">http://34.77.240.214/ades-proxy/swagger-ui/index.html</a>) with a OGC API for Processes as defined in OGC Testbed 14 (<a href="https://raw.githubusercontent.com/spacebel/testbed14/master/json-spec/wps-t_tb14_spacebel-v1.6.yaml" class="bare">https://raw.githubusercontent.com/spacebel/testbed14/master/json-spec/wps-t_tb14_spacebel-v1.6.yaml</a>), including the Transactional and the Quoting &amp; Billing extensions. Resources <code>/</code>, <code>/conformance</code>, <code>/processes</code>, `/jobs`were implemented and interoperability was shown through TIE testing with the Solenix client.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_proposed_alternatives_54"><a class="anchor" href="#_proposed_alternatives_54"></a>A.55.3. Proposed Alternatives</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>The Catalog Server combines an OpenSearch interface with GeoJSON responses (OGC 13-026r8, OGC 17-047) for simple clients and a more advanced OpenAPI-based interface.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_experiences_with_ogc_api_specifications_55"><a class="anchor" href="#_experiences_with_ogc_api_specifications_55"></a>A.55.4. Experiences with OGC API Specifications</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>Spacebel has experience with Swagger and OpenAPI since 2016 and already used this technology in previous OGC Testbeds.</p>
+</div>
+<div class="sect4">
+<h5 id="_ogc_api_common_3"><a class="anchor" href="#_ogc_api_common_3"></a>OGC API Common</h5>
+<div class="paragraph">
+<p>Wrapping an OpenSearch compliant catalog with an OGC API Common interface was achieved as part of the hackaton.  Extending the interface to OGC API Features (mainly temporal and geograpical searches) is future work.</p>
+</div>
+<div class="paragraph">
+<p>The main issue encountered was to define what /collections (which has a fixed response) format might return in the case of an OpenSearch catalog hosting EO application and service metadata, EO collection metadata and EO product metadata simultaneously.  The proposed approach can be seen at <a href="https://databio.spacebel.be/eo-catalog/collections" class="bare">https://databio.spacebel.be/eo-catalog/collections</a>.  The hyperlinks included in this response allow to refer directly to an OpenSearch OSDD (rel="search") and to the applicable JSON Schemas (rel="describedby").</p>
+</div>
+<div class="paragraph">
+<p>The figure below shows that service and application data could be sucessfully discovered via the OpenSphere client accessing the DataBio Catalog Server.</p>
+</div>
+<div id="img_eo_service_metadata" class="imageblock text-center">
+<div class="content">
+<img src="images/spacebel-1.jpg" alt="spacebel 1">
+</div>
+<div class="title">Figure 14. EO Service and Application metadata (OGC 19-020) from DataBio and OGC Testbed-15 shown in OpenSphere</div>
+</div>
+<div class="paragraph">
+<p>The OpenSpere client also allows browsing EO Product metadata, visualise corresponding footprints on the map and display metadata properties for a particular EO Product.</p>
+</div>
+<div id="img_eo_product_metadata" class="imageblock text-center">
+<div class="content">
+<img src="images/spacebel-2.jpg" alt="spacebel 2">
+</div>
+<div class="title">Figure 15. EO Product metadata (OGC 17-003) shown in OpenSphere</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ogc_api_for_processes"><a class="anchor" href="#_ogc_api_for_processes"></a>OGC API for Processes</h5>
+<div class="paragraph">
+<p>A major discussion during the OGC Hackaton 2019 (London) was about describing the process interfaces (i.e. the Process Description including inputs and outputs definitions) directly in JSON Schema and/or OpenAPI. Indeed, as OpenAPI already supports descriptions of schemas/interfaces, this would remove the need of using a specific Process Description schema, and this would also ease the work of Web client developers.</p>
+</div>
+<div class="paragraph">
+<p>For each existing process, a resource with a HTTP path is defined in the API document. Therefore, processes are discovered through the API document (no need of discovery and describe process operations) and the Client directly knows how to invoke the execution. The API document is illustrated below:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example of processes exposed as OpenAPI operations</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>openapi: 3.0.0
+paths:
+ # For each process the path and interface is provided as below
+ '/processes/mySampleProcess/jobs':
+   post:
+      summary: Start mySampleProcess execution.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/mySampleProcessExecuteRequest'
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL to check the status of the execution/job.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A complete report about the mapping between the Process Description specification and the JSON Schema format is available at <a href="https://github.com/spacebel/testbed14/wiki/OGC-Hackaton-2019" class="bare">https://github.com/spacebel/testbed14/wiki/OGC-Hackaton-2019</a>.</p>
+</div>
+<div class="paragraph">
+<p>Others topics have also been covered during the Hackaton:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The transactional extension specification has been submitted to the offical github repository at <a href="https://github.com/opengeospatial/wps-rest-binding/commit/7bdee9df5652ad3a7ad13075c535b84f9b264d0b" class="bare">https://github.com/opengeospatial/wps-rest-binding/commit/7bdee9df5652ad3a7ad13075c535b84f9b264d0b</a>.</p>
+</li>
+<li>
+<p>An extension supporting callbacks would allow a more modern pattern for monitoring the jobs status. Instead of observing (repeated polling), the client can be notified on the following event: onSuccess, onFailure, onUpdate. Spacebel has proposed a draft specification for such notification feature (relying on OpenAPI callbacks): <a href="https://github.com/opengeospatial/wps-rest-binding/commit/8cc2bdaf6483af7d8c5a85c7ad0a45b8e68cc4b6" class="bare">https://github.com/opengeospatial/wps-rest-binding/commit/8cc2bdaf6483af7d8c5a85c7ad0a45b8e68cc4b6</a></p>
+</li>
+<li>
+<p>A very classical issue related to the possibility to report list of files as outputs was discussed. The conclusion of the discussion was that the new Processing API should support the presence of output file arrays.</p>
+</li>
+<li>
+<p>Some fixes listed at <a href="https://github.com/opengeospatial/wps-rest-binding/issues" class="bare">https://github.com/opengeospatial/wps-rest-binding/issues</a> have been proposed during the Hackaton.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_other_impressions_recommendations_55"><a class="anchor" href="#_other_impressions_recommendations_55"></a>A.55.5. Other Impressions &amp; Recommendations</h4>
 <div class="paragraph">
-<p>TBA</p>
+<p>Further alignment of the OpenSearch Catalog Server with OGC API Features interfaces, requires reconciling the time and bbox related search parameters from OGC 10-032 and OGC API Features.  While OGC 10-032r8 has separate search parameters representing the start and end of a search interval <code>{time:start}</code> and <code>{time:end}</code> respectively, OGC API Features imposes a single search parameter to represent the interval.</p>
+</div>
+<div class="paragraph">
+<p>OpenSearch and OpenAPI Common convergence would benefit from a revision of OGC 10-032r8 to ensure that the geo:box, time:start and time:end can be combined in a single URL template with the actual HTTP query parameter names imposed by OpenAPI Common for temporal and geographical search.</p>
+</div>
+<div class="paragraph">
+<p>The approach to represent hyperlinks in JSON is unfortunately different from the encoding proposed by OGC 14-055r2 which means that an OpenSearch implemention based simultaneously on OGC 14-055r2 and OGC 17-047 in combination with OGC API Common will have different encodings for links in search responses and in other resource representations (e.g. <code>/conformance</code>, <code>/</code> etc).</p>
+</div>
+<div class="paragraph">
+<p>The OGC API specifications are imposing to advertise "paths" in the Landing Page response and also contain wording suggesting that actual path names such as "api", "conformance", "collections" are mandatory and not just examples.  This should be made clearer and it seems redundant to impose the declaration of paths in the landing page if indeed the path names are "fixed".</p>
+</div>
+<div class="paragraph">
+<p>Making (JSON) data models available as separate JSON Schemas (<a href="https://swagger.io/docs/specification/data-models/keywords/" class="bare">https://swagger.io/docs/specification/data-models/keywords/</a>) and not mixing them with actual OpenAPI descriptions (but refer to them) would allow validating JSON representations separately with JSON schema validation tools and before a service is put up.</p>
 </div>
 </div>
 </div>
@@ -5706,7 +5950,7 @@ Test Suites and ongoing "in the open" standards development.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-06-25 14:00:17 +0200
+Last updated 2019-06-28 10:09:07 +0200
 </div>
 </div>
 <style>

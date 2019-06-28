@@ -1,0 +1,69 @@
+[[KeyFindings]]
+== Key Findings
+
+This section presents the key findings from the Hackathon.
+
+=== What occurred
+
+==== Processes
+
+The decision to hold the OGC API Hackathon was made by the TC at the 2019 TC meeting in Singapore. Following this decision, OGC staff engaged a number of potential sponsors from the OGC membership. Having identified sponsors and hosts, a series of teleconferences were held for planning the event. These teleconferences discussed venue logistics, computing infrastructure, data, scenarios, catering and other topics. A Gantt chart of the planning and execution of the hackathon is shown in <<img_gantt>>.
+
+[#img_gantt,reftext='{figure-caption} {counter:figure-num}']
+.A Gantt chart of the planning and execution of the hackathon
+image::images/gantt.png[width=800,align="center"]
+
+During the hackathon, the process involved alternation between briefings, discussions and coding. On the first day of the hackathon, three back-briefs were held, that is one in the morning, another in the afternoon and another in the evening. These briefings provided an opportunity for issues to be discussed across teams. Agreements and resolutions from the discussions triggered by the briefings were then fed back into the team-specific work.
+
+==== Organization
+
+By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses, with the spread of interest as shown in <<img_interests>>.
+
+[#img_interests,reftext='{figure-caption} {counter:figure-num}']
+.Participants' interests
+image::images/interests.png[width=800,align="center"]
+
+The hackathon was therefore organized around teams based on the OGC API specifications. Participants interested in APIs other than those for coverages, processes, and map tiles, were asked to contribute to the work on advancing the OGC API - Common specification. This would help ensure that the OGC API - Common specification provides an appropriate a base for all future OGC APIs.
+
+==== Technology
+
+The client and service applications were bound together through interfaces conforming to the OGC APIs for Map Tiles, Processes, Features, Catalogues, and Coverages. The client applications included software from Hexagon, Helyx, OpenSphere, Esri, Solenix, EURAC and Sinergise. The service applications included software from  52 North, CubeWerx, Esri, Helyx, pygeoapi, Geoserver, Spacebel, West University of Timisoara, and rasdaman. The variety of software implementations suggests that the OGC API specifications widely implementable and do not depend on any single vendor’s technology.
+
+As discussed in <<Architecture>>, the software products that were deployed by the aforementioned organizations included:
+
+* pygeoapi
+* 52°North JavaPS
+* Esri prototype facade on to ArcGIS Online tiled services
+* rasdaman
+* OpenSphere OGC API Plugin
+* Hexagon LuciadLightspeed
+* Solenix WPS Demo Client
+* Esri OGC API-Tiles Demo Client
+
+The deployed technologies includes software implemented in Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in C++. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
+
+==== Information
+
+TBA
+
+[#img_commits,reftext='{figure-caption} {counter:figure-num}']
+.The total number of commits made to Github repositories for Processes, Map Tiles, Common and Coverages
+image::images/commits.png[width=800,align="center"]
+
+TBA
+
+[#img_issues,reftext='{figure-caption} {counter:figure-num}']
+.The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages
+image::images/issues.png[width=800,align="center"]
+
+=== Experiences
+
+TBA
+
+=== Lessons learnt
+
+TBA
+
+=== What are the next steps?
+
+TBA
