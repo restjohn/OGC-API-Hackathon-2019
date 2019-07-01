@@ -17,7 +17,7 @@ TBA
 
 ==== Experiences with OGC API Specifications
 
-Esri has been involved in the OGC since its inception, and have widely implemented many other OGC standards in both server and client software.
+Esri has been involved in the OGC since its inception, and has widely implemented many other OGC standards in both server and client software. After each ArcGIS product release, the latest core OGC standards with compliance tests are reviewed. Currently, 133 ArcGIS products (multiple versions) have received compliance certifications across 338 OGC implementations.
 
 ==== Other Impressions & Recommendations
 
