@@ -42,3 +42,4 @@ offline-capable mobile app.
 * Improve the documentation on CRS extension usage
 * Improve the documentation on usage of the Accept request HTTP header and how it relates to the f parameter in next response links
 * Validate the https://github.com/opengeospatial/WFS_FES/blob/master/implementations.md[referenced implementations] against the current specification
+* Update Simple Feature references to refer to https://www.opengeospatial.org/standards/sfa[Simple Feature Access - Part 1: Common Architecture], version 1.2.1, http://portal.opengeospatial.org/files/?artifact_id=25355[document 06-103r4]
