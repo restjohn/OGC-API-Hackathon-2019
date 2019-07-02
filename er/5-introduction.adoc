@@ -140,7 +140,7 @@ The following organizations participated in the Hackathon:
 * blockdore
 * Board Adviser
 * British Antarctic Survey
-* CACI (BIT Systems)
+* CACI (BIT Systems), NGA Mobile Apps
 * Cicy
 * CREAF
 * CubeWerx Inc.
