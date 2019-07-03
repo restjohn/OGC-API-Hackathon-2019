@@ -17,6 +17,7 @@ Participant: Matthias Mohr
 ==== Proposed Alternatives
 
 * Workflows (process chaining) for WPS would be mandatory, but is not foreseen yet.
+* WPS: Use JSON Schema for data types? See [openEO approach for processes](https://open-eo.github.io/openeo-api/v/0.4.1/apireference/#tag/Process-Discovery).
 * CSW/CAT should align with STAC! Very similar approach, diverging doesn't make sense.
 
 ==== Experiences with OGC API Specifications
