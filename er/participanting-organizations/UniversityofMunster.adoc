@@ -8,23 +8,32 @@ Participant: Matthias Mohr
 * Align the openEO API with OGC API - Commons.
 * Start discussions with the WPS community about alignment and their take on process chaining.
 * Figure out future steps of WFS3 to port them back to the STAC specification.
-* Discuss with CSW/CAT people about the planned steps and alignment with STAC.
+* Discuss with CSW/CAT group about the planned steps and alignment with STAC.
 
 ==== Implemented Solution
 
-* openEO API implementation, which partly implements and aligns with OGC API - Commons / WFS3.
+* Tried to implement a WPS on top of the [openEO Google Earth Engine driver](https://github.com/Open-EO/openeo-earthengine-driver). Implementation was not possible due to WPS/GEE restrictions.
 
 ==== Proposed Alternatives
 
-* Workflows (process chaining) for WPS?
-* Base CSW/CAT work on STAC?
-* ...
+* Workflows (process chaining) for WPS would be mandatory, but is not foreseen yet.
+* WPS: Use JSON Schema for data types? See [openEO approach for processes](https://open-eo.github.io/openeo-api/v/0.4.1/apireference/#tag/Process-Discovery).
+* CSW/CAT should align with STAC! Very similar approach, diverging doesn't make sense.
 
 ==== Experiences with OGC API Specifications
 
-* WFS3 experience through STAC, contributed to WFS3 with some proposals for changes.
-* Basic understanding of WPS and Commons
+Problems with **WPS** for openEO:
+* WPS is not flexible enough for modern workflow execution, especially chaining of processes is missing
+* openEO only allows a single return value (like mathematical functions), WPS allows multiple. This is problematic for process chaining (openEO process graphs).
+* A parameter can be specified multiple times, which was possible in XML, but needs a workaround in JSON.
+* Data types between openEO and WPS are quite different. WPS allows sending the data to the process, openEO prefers to load it from the cloud, which is more feasible with big data sets.
+* Synchronous execution still has a state on the server and doesn’t directly return the result in WPS, see https://github.com/opengeospatial/wps-rest-binding/issues/40
+
+**WFS**:
+* How to propose extensions?
+* What query langauge to use for the API? CQL?
 
 ==== Other Impressions & Recommendations
 
-TBA
+* I can't stress this enough: Don't just make standalone specifications, but make them work together. This is not only having a common set of functionality with OGC API - Commons, but using WFS/WCS/WPS/CAT in a SINGLE API. We tried this with openEO for the previous versions of the standards and miserably failed. Therefore, we had to come up with non OGC standards, especially for processing. So make sure you have communication between the groups how the standards can be used seamlessly together!
+* Plan a CAT and/or WFS sprint together with STAC?
