@@ -23,6 +23,7 @@ Participant: Matthias Mohr
 ==== Experiences with OGC API Specifications
 
 Problems with **WPS** for openEO:
+
 * WPS is not flexible enough for modern workflow execution, especially chaining of processes is missing
 * openEO only allows a single return value (like mathematical functions), WPS allows multiple. This is problematic for process chaining (openEO process graphs).
 * A parameter can be specified multiple times, which was possible in XML, but needs a workaround in JSON.
@@ -30,6 +31,7 @@ Problems with **WPS** for openEO:
 * Synchronous execution still has a state on the server and doesn’t directly return the result in WPS, see https://github.com/opengeospatial/wps-rest-binding/issues/40
 
 **WFS**:
+
 * How to propose extensions?
 * What query langauge to use for the API? CQL?
 
