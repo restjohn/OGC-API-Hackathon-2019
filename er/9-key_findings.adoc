@@ -15,6 +15,38 @@ image::images/gantt.png[width=800,align="center"]
 
 During the hackathon, the process involved alternation between briefings, discussions and coding. On the first day of the hackathon, three back-briefs were held, that is one in the morning, another in the afternoon and another in the evening. These briefings provided an opportunity for issues to be discussed across teams. Agreements and resolutions from the discussions triggered by the briefings were then fed back into the team-specific work.
 
+The agenda for the hackathon is presented in the next subsection.
+
+===== Agenda
+
+*_Day 1 - Thursday 20th June, 2019_*
+
+* 09:00hrs - Welcome note (Geovation Hub Staff)
+* 09:15hrs - Goals and objectives (OGC DKM & SWG Chairs)
+* 09:30hrs - Introduction to the Draft Specifications (Common, Features, Map Tiles, Processes, Coverages)
+* 11:00hrs – Split into teams by specification
+* 11:10hrs – Team-based work starts [define the problem/scope]
+* 12:30hrs - Lunch
+* 13:30hrs - Resume [come up with multiple options]
+* 17:00hrs - Early Dinner
+* 18:00hrs - Resume [select the preferred option]
+* 20:00hrs - Back-briefs from each team
+* 21:00hrs - Adjourn
+
+
+*_Day 2 - Friday 21st June, 2019_*
+
+* 08:00hrs - Goals and objectives (OGC DKM & SWG Chairs)
+* 08:30hrs - Resume team-based work [implement the preferred option]
+* 12:00hrs - Third back-briefs from each team [ "alignment report" to brief on any deviation from Core as provided at start]
+* 12:30hrs - Working Lunch [complete implementation of the preferred option]
+* 13:30hrs – Joint work on Common or Resume team-based work [implement the preferred option]
+* 14:30hrs – Show & Tell (Demonstration of clients accessing services)
+* 15:30hrs - Final back-briefs
+* 16:30hrs - Closing note (OGC COO)
+* 17:00hrs - Close
+
+
 ==== Organization
 
 By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses. The spread of responses to the hackathon is shown in <<img_interests>>.
@@ -53,8 +85,7 @@ A key aspect of executing a hackathon is the communication within and between th
 * Github: Used for logging issues and sharing documents (including the engineering report) across teams.
 * OGC Mailing list: Used for sharing administrative information with all participants ahead of the hackathon.
 * Gotomeeting: Used for the pre-event webinar and for teleconferencing with remote participants during the hackathon.
-
-NOTE: The Ordnance Survey provided the Microsoft Teams platform for supporting participants that had requested access to the Ordnance Survey Cloud.
+* Microsoft Teams: Used by the Ordnance Survey for supporting participants that had requested access to the Ordnance Survey Cloud.
 
 ===== Knowledge Capture
 

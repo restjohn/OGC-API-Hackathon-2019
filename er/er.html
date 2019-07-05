@@ -822,8 +822,9 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#_experiences">10.2. Experiences</a></li>
 <li><a href="#_lessons_learnt">10.3. Lessons learnt</a>
 <ul class="sectlevel3">
-<li><a href="#_ramping_up_towards_the_hackathon_date">10.3.1. Ramping up towards the hackathon date</a></li>
-<li><a href="#_motivation_to_participate">10.3.2. Motivation to Participate</a></li>
+<li><a href="#_duration_of_the_hackathon">10.3.1. Duration of the hackathon</a></li>
+<li><a href="#_scheduling_of_the_hackathon">10.3.2. Scheduling of the hackathon</a></li>
+<li><a href="#_motivation_to_participate">10.3.3. Motivation to participate</a></li>
 </ul>
 </li>
 <li><a href="#_what_are_the_next_steps">10.4. What are the next steps?</a></li>
@@ -1390,8 +1391,13 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 </ul>
 </li>
-<li><a href="#RevisionHistory">Appendix B: Revision History</a></li>
-<li><a href="#Bibliography">Appendix C: Bibliography</a></li>
+<li><a href="#OGCAPIHackathonAgenda">Appendix B: Invitation to Participate</a>
+<ul class="sectlevel2">
+<li><a href="#_invitation_announcement">B.1. Invitation Announcement</a></li>
+</ul>
+</li>
+<li><a href="#RevisionHistory">Appendix C: Revision History</a></li>
+<li><a href="#Bibliography">Appendix D: Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -2004,6 +2010,27 @@ This section is a working draft.
 </li>
 </ul>
 </div>
+<div class="sect4">
+<h5 id="_ordnance_survey_sponsored_cloud_infrastructure"><a class="anchor" href="#_ordnance_survey_sponsored_cloud_infrastructure"></a>Ordnance Survey-sponsored Cloud infrastructure</h5>
+<div class="paragraph">
+<p>A survey was emailed to each Hackathon participant prior to the event.  Based on the results of the survey, four virtual machines were created by Ordnance Survey for use during the Hackathon by the nine users who replied specifying a need to use Azure based architecture. An illustration of the configuration of the infrastructure is presented in <a href="#img_azure">Figure 3</a>.</p>
+</div>
+<div id="img_azure" class="imageblock text-center">
+<div class="content">
+<img src="images/azure.png" alt="azure" width="800">
+</div>
+<div class="title">Figure 3. OGC Hackathon Azure Infrastructure sponsored by Ordnance Survey</div>
+</div>
+<div class="paragraph">
+<p>Pairs of servers were configured with the CentOS 7.6 and Ubuntu 18.04 Long Term Support (LTS) operating systems to meet the requirements specified within the survey.  Each of the nine users was given their own 100GB Azure File share, mounted across to each virtual machine with Network File System (NFS) to enable cross-server working.</p>
+</div>
+<div class="paragraph">
+<p>Each server was installed with a similar set of software: Corretto, Docker, Docker Compose &amp; Python 3.7.</p>
+</div>
+<div class="paragraph">
+<p>In addition, Ordnance Survey provided three cut-down datasets for OS MasterMap (Highways, TOPO &amp; Water Networks) covering the areas of interest being used during the Hackathon.  Access to these datasets was made available using secure tokens.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2238,13 +2265,13 @@ This list will be updated at the start of the Hackathon
 <h2 id="Architecture"><a class="anchor" href="#Architecture"></a>7. Architecture</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The focus of the hackathon was on development of the OGC API - Common, the OGC API - Features, OGC API – Processes, the OGC API – Coverages and the OGC API – Map Tiles standards. Implementations of these specifications were deployed in the Hackathon infrastructure in order to build a solution with the architecture shown in <a href="#img_architecture">Figure 3</a>. As shown on the illustration, the architecture adopted a multi-tier approach that included one or more implementations of each OGC API specification deployed on the wider Internet (e.g. in participants' own Cloud environments), as well as some implementations deployed in the Ordnance Survey&#8217;s Cloud which is hosted on Microsoft Azure.</p>
+<p>The focus of the hackathon was on development of the OGC API - Common, the OGC API - Features, OGC API – Processes, the OGC API – Coverages and the OGC API – Map Tiles standards. Implementations of these specifications were deployed in the Hackathon infrastructure in order to build a solution with the architecture shown in <a href="#img_architecture">Figure 4</a>. As shown on the illustration, the architecture adopted a multi-tier approach that included one or more implementations of each OGC API specification deployed on the wider Internet (e.g. in participants' own Cloud environments), as well as some implementations deployed in the Ordnance Survey&#8217;s Cloud which is hosted on Microsoft Azure.</p>
 </div>
 <div id="img_architecture" class="imageblock text-center">
 <div class="content">
 <img src="images/DeploymentDiagram.png" alt="DeploymentDiagram" width="800">
 </div>
-<div class="title">Figure 3. Solution Architecture of the OGC API Hackathon</div>
+<div class="title">Figure 4. Solution Architecture of the OGC API Hackathon</div>
 </div>
 <div class="paragraph">
 <p>The OGC API - Common specification documents the set of common practices and shared requirements that have emerged from the development of Resource Oriented Architectures and Web APIs within the OGC. The specification serves as a common foundation upon which all OGC APIs will be built. The OGC API - Processes specification defines how a client application can request the execution of a process, how the inputs to that process can be provided, and how the output from the process is handled. The OGC API - Map Tiles specification defines an OGC standard for a Web Map Tile API that can serve map tiles of spatially referenced data using tile images with predefined content, extent, and resolution. The OGC API - Coverages specification defines a Web API for accessing coverages that are modelled according to the <a href="http://docs.opengeospatial.org/is/09-146r6/09-146r6.html">Coverage Implementation Schema (CIS) 1.1</a>. The hackathon also sought to maintain consistency between the aforementioned specifications and the OGC API - Features specification. The OGC API - Features specification offers the capability to create, modify and query geospatial feature data on the Web.</p>
@@ -3136,28 +3163,108 @@ Services on rows and Clients on columns
 <div class="sect3">
 <h4 id="_processes"><a class="anchor" href="#_processes"></a>10.1.1. Processes</h4>
 <div class="paragraph">
-<p>The decision to hold the OGC API Hackathon was made by the TC at the 2019 TC meeting in Singapore. Following this decision, OGC staff engaged a number of potential sponsors from the OGC membership. Having identified sponsors and hosts, a series of teleconferences were held for planning the event. These teleconferences discussed venue logistics, computing infrastructure, data, scenarios, catering and other topics. A Gantt chart of the planning and execution of the hackathon is shown in <a href="#img_gantt">Figure 4</a>.</p>
+<p>The decision to hold the OGC API Hackathon was made by the TC at the 2019 TC meeting in Singapore. Following this decision, OGC staff engaged a number of potential sponsors from the OGC membership. Having identified sponsors and hosts, a series of teleconferences were held for planning the event. These teleconferences discussed venue logistics, computing infrastructure, data, scenarios, catering and other topics. A Gantt chart of the planning and execution of the hackathon is shown in <a href="#img_gantt">Figure 5</a>.</p>
 </div>
 <div id="img_gantt" class="imageblock text-center">
 <div class="content">
 <img src="images/gantt.png" alt="gantt" width="800">
 </div>
-<div class="title">Figure 4. A Gantt chart of the planning and execution of the hackathon</div>
+<div class="title">Figure 5. A Gantt chart of the planning and execution of the hackathon</div>
 </div>
 <div class="paragraph">
 <p>During the hackathon, the process involved alternation between briefings, discussions and coding. On the first day of the hackathon, three back-briefs were held, that is one in the morning, another in the afternoon and another in the evening. These briefings provided an opportunity for issues to be discussed across teams. Agreements and resolutions from the discussions triggered by the briefings were then fed back into the team-specific work.</p>
+</div>
+<div class="paragraph">
+<p>The agenda for the hackathon is presented in the next subsection.</p>
+</div>
+<div class="sect4">
+<h5 id="_agenda"><a class="anchor" href="#_agenda"></a>Agenda</h5>
+<div class="paragraph">
+<p><strong><em>Day 1 - Thursday 20th June, 2019</em></strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>09:00hrs - Welcome note (Geovation Hub Staff)</p>
+</li>
+<li>
+<p>09:15hrs - Goals and objectives (OGC DKM &amp; SWG Chairs)</p>
+</li>
+<li>
+<p>09:30hrs - Introduction to the Draft Specifications (Common, Features, Map Tiles, Processes, Coverages)</p>
+</li>
+<li>
+<p>11:00hrs – Split into teams by specification</p>
+</li>
+<li>
+<p>11:10hrs – Team-based work starts [define the problem/scope]</p>
+</li>
+<li>
+<p>12:30hrs - Lunch</p>
+</li>
+<li>
+<p>13:30hrs - Resume [come up with multiple options]</p>
+</li>
+<li>
+<p>17:00hrs - Early Dinner</p>
+</li>
+<li>
+<p>18:00hrs - Resume [select the preferred option]</p>
+</li>
+<li>
+<p>20:00hrs - Back-briefs from each team</p>
+</li>
+<li>
+<p>21:00hrs - Adjourn</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong><em>Day 2 - Friday 21st June, 2019</em></strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>08:00hrs - Goals and objectives (OGC DKM &amp; SWG Chairs)</p>
+</li>
+<li>
+<p>08:30hrs - Resume team-based work [implement the preferred option]</p>
+</li>
+<li>
+<p>12:00hrs - Third back-briefs from each team [ "alignment report" to brief on any deviation from Core as provided at start]</p>
+</li>
+<li>
+<p>12:30hrs - Working Lunch [complete implementation of the preferred option]</p>
+</li>
+<li>
+<p>13:30hrs – Joint work on Common or Resume team-based work [implement the preferred option]</p>
+</li>
+<li>
+<p>14:30hrs – Show &amp; Tell (Demonstration of clients accessing services)</p>
+</li>
+<li>
+<p>15:30hrs - Final back-briefs</p>
+</li>
+<li>
+<p>16:30hrs - Closing note (OGC COO)</p>
+</li>
+<li>
+<p>17:00hrs - Close</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_organization"><a class="anchor" href="#_organization"></a>10.1.2. Organization</h4>
 <div class="paragraph">
-<p>By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses. The spread of responses to the hackathon is shown in <a href="#img_interests">Figure 5</a>.</p>
+<p>By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses. The spread of responses to the hackathon is shown in <a href="#img_interests">Figure 6</a>.</p>
 </div>
 <div id="img_interests" class="imageblock text-center">
 <div class="content">
 <img src="images/interests.png" alt="interests" width="800">
 </div>
-<div class="title">Figure 5. Participants' interests</div>
+<div class="title">Figure 6. Participants' interests</div>
 </div>
 <div class="paragraph">
 <p>The hackathon was therefore organized around teams based on the OGC API specifications. Participants interested in APIs other than those for coverages, processes, and map tiles, were asked to contribute to the work on advancing the OGC API - Common specification. This would help ensure that the OGC API - Common specification provides an appropriate a base for all future OGC APIs.</p>
@@ -3289,22 +3396,22 @@ A commit is a single point in the Git history that represents a "revision" or "v
 </table>
 </div>
 <div class="paragraph">
-<p>The various teams involved in the hackathon used the Github repositories of their relevant OGC API specifications to log issues that were identified during discussions. Note that the hackathon took place at the end of the week, and thus some of the participants were only able to log issues at the beginning of the week after the hackathon. <a href="#img_issues">Figure 6</a> presents a graph of the total number of issues logged in Github repositories on the lead up to the hackathon event, during the event and the week after the event. The effect of the hackathon is clearly visible from the 'spike' in the number of issues logged during the two days of the hackathon event (i.e. June 20th &amp; 21st).</p>
+<p>The various teams involved in the hackathon used the Github repositories of their relevant OGC API specifications to log issues that were identified during discussions. Note that the hackathon took place at the end of the week, and thus some of the participants were only able to log issues at the beginning of the week after the hackathon. <a href="#img_issues">Figure 7</a> presents a graph of the total number of issues logged in Github repositories on the lead up to the hackathon event, during the event and the week after the event. The effect of the hackathon is clearly visible from the 'spike' in the number of issues logged during the two days of the hackathon event (i.e. June 20th &amp; 21st).</p>
 </div>
 <div id="img_issues" class="imageblock text-center">
 <div class="content">
 <img src="images/issues.png" alt="issues" width="800">
 </div>
-<div class="title">Figure 6. The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages</div>
+<div class="title">Figure 7. The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages</div>
 </div>
 <div class="paragraph">
-<p>Changes to the OGC API specifications were made on the lead up to the hackathon, and during the event. <a href="#img_commits">Figure 7</a> presents the total number of commits in Github repositories for OGC APIs on the lead up to the hackathon event, during the event and the week after the event. The commits represent more than 4600 additions and 3200 deletions to the draft API specifications. The number of additions and deletions was determined from the commits made to Github repositories for Processes, Map Tiles, Common and Coverages.</p>
+<p>Changes to the OGC API specifications were made on the lead up to the hackathon, and during the event. <a href="#img_commits">Figure 8</a> presents the total number of commits in Github repositories for OGC APIs on the lead up to the hackathon event, during the event and the week after the event. The commits represent more than 4600 additions and 3200 deletions to the draft API specifications. The number of additions and deletions was determined from the commits made to Github repositories for Processes, Map Tiles, Common and Coverages.</p>
 </div>
 <div id="img_commits" class="imageblock text-center">
 <div class="content">
 <img src="images/commits.png" alt="commits" width="800">
 </div>
-<div class="title">Figure 7. The total number of commits made to Github repositories for Processes, Map Tiles, Common and Coverages</div>
+<div class="title">Figure 8. The total number of commits made to Github repositories for Processes, Map Tiles, Common and Coverages</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3339,7 +3446,7 @@ All changes were controlled and vetted by the editors of the OGC API specificati
 <p>A fourth objective of the hackathon was to validate work that has been completed to date. The successful implementation, by multiple different organisations, of the OGC API specifications supported the validation of the prior work (i.e. the approach taken for the various OGC API specifications). The hackathon also provided the opportunity to invalidate or rethink specific aspects of some of the specifications. The fact that the different specifications extended the OGC API - Common specification, supports the view that the approach taken for organizing and structuring the OGC API specifications was validated by the hackathon. This confirms that the fourth objective of the hackathon was also met.</p>
 </div>
 <div class="paragraph">
-<p>A fifth objective of the hackathon was to contribute to the GitHub repositories. <a href="#img_commits">Figure 7</a> presents the total number of commits made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. <a href="#img_issues">Figure 6</a> presents the total number of issues made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. The commits and issues of the lead up to the hackathon and during the hackathon confirm that the fifth objective of the hackathon was also met.</p>
+<p>A fifth objective of the hackathon was to contribute to the GitHub repositories. <a href="#img_commits">Figure 8</a> presents the total number of commits made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. <a href="#img_issues">Figure 7</a> presents the total number of issues made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. The commits and issues of the lead up to the hackathon and during the hackathon confirm that the fifth objective of the hackathon was also met.</p>
 </div>
 <div class="paragraph">
 <p>This subsection has reflected on all of the objectives of the hackathon and confirmed that they were all met. The next section identifies lessons learnt from holding the hackathon.</p>
@@ -3348,43 +3455,59 @@ All changes were controlled and vetted by the editors of the OGC API specificati
 <div class="sect2">
 <h3 id="_lessons_learnt"><a class="anchor" href="#_lessons_learnt"></a>10.3. Lessons learnt</h3>
 <div class="sect3">
-<h4 id="_ramping_up_towards_the_hackathon_date"><a class="anchor" href="#_ramping_up_towards_the_hackathon_date"></a>10.3.1. Ramping up towards the hackathon date</h4>
+<h4 id="_duration_of_the_hackathon"><a class="anchor" href="#_duration_of_the_hackathon"></a>10.3.1. Duration of the hackathon</h4>
 <div class="paragraph">
-<p>TBA</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_motivation_to_participate"><a class="anchor" href="#_motivation_to_participate"></a>10.3.2. Motivation to Participate</h4>
-<div class="paragraph">
-<p>The motivation for participants included:</p>
+<p>Two of the participants expressed concerns that the duration of the hackathon was rather short. There was a suggestion that a minimum three days may have been more appropriate. To an extent, the approach taken to incrementally ramp up towards the hackathon date addressed some of these concerns. However, it is accepted that a three-day hackathon could have led to more outputs. A three-day hackathon could cover the following, for example:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Evolution of the OGC specifications to a modern, developer-friendly API is essential.</p>
+<p>Day 1: Discussions and revisions to the draft standards</p>
 </li>
 <li>
-<p>Since a lot of the developments of OGC API now are moving in a similar direction, we wanted to participate in this hackathon event in order to understand well the intend and orientation of OGC API and also to align as much as possible the implementations, in order to make them compatible.</p>
+<p>Day 2: Implementation of the draft standards</p>
 </li>
 <li>
-<p>Get more informations about the directions followed by the working groups for the different standards. Get answer to some questions we got about the Processes api specifically.</p>
-</li>
-<li>
-<p>to help solve the discoverability problem. seeking to facilitate making life easier for finding data through the new OGC API Specifications, or at least to ensure it did not get even harder</p>
-</li>
-<li>
-<p>to share its expertise as long-term implementer and user to support the advancements of OGC standards related to map tiles, coverages and processes.</p>
-</li>
-<li>
-<p>We would like the APIs to be consistent with, and conformant to, any OGC OpenAPI standards.</p>
-</li>
-<li>
-<p>recognise the value of simple, implementer-friendly standards.</p>
-</li>
-<li>
-<p>aiming to improve alignment of the DataBio catalog and Hub implementation with the OGC API Common specification in addition to the Testbed-15 EOPAD discovery approach.</p>
+<p>Day 3: Design and implementation of Executable Test Suites of the draft standards</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_scheduling_of_the_hackathon"><a class="anchor" href="#_scheduling_of_the_hackathon"></a>10.3.2. Scheduling of the hackathon</h4>
+<div class="paragraph">
+<p>It cannot be ignored that the scheduling of the hackathon during the week preceding the OGC TC meeting in nearby Leuven made it possible for some of the participants to travel to both events. This aspects of the scheduling made a difference for participants that had travelled from abroad. In some cases however the scheduling meant that some interested parties could not attend the hackathon due to its proximity, in scheduling, to the TC meeting. Overall however the proximity to the TC meeting proved to be helpful.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_motivation_to_participate"><a class="anchor" href="#_motivation_to_participate"></a>10.3.3. Motivation to participate</h4>
+<div class="paragraph">
+<p>In some hackathons prizes are awarded, ranging from a few hundred to a <a href="https://techcrunch.com/2013/11/21/two-harvard-university-alum-win-salesforce-1m-hackathon-prize-at-dreamforce-for-mobile-service-to-create-reports">million dollars</a> (USD). In organizing the OGC API Hackathon, OGC staff considered the goal of the hackathon was in relation to the likely motivation of participants. Given that the goal of the hackathon was to advance the OGC API specification, collaboration between different organizations became a key consideration. A decision was therefore made to offer travel support to any participants that applied for such support, instead of offering a competition prize. A review of the motivation for various participants to take part in the hackathon supported this devision. Below are some examples of the motivation of some of the participants to participate, extracted from <a href="#OGCAPIImplementations">Implementations of OGC APIs</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Evolution of the OGC specifications to a modern, developer-friendly API is essential"</p>
+</li>
+<li>
+<p>"We wanted to participate in this hackathon event in order to understand well the intent and orientation of OGC APIs, as well as to align as much as possible the implementations, in order to make them compatible"</p>
+</li>
+<li>
+<p>"To get more information about the direction followed by the working groups for the different standards, as well as to get answers to some questions we have got about the OGC API - Processes specification specifically"</p>
+</li>
+<li>
+<p>"To help solve the discoverability problem&#8230;&#8203;to facilitate making life easier for finding data through the new OGC API specifications"</p>
+</li>
+<li>
+<p>"To share [our] expertise as a long-term implementer and user, to support the advancements of OGC standards related to map tiles, coverages and processes"</p>
+</li>
+<li>
+<p>"We would like the implemented APIs to be consistent with, and conformant to, any OGC API standards"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The sample of statements presented above suggests that the advancement of open standards, on its own, can be useful as a motivator for participation. In situations where collaboration across organisations is not a key consideration, a competitive hackathon offering prizes would be appropriate.</p>
 </div>
 </div>
 </div>
@@ -3413,13 +3536,13 @@ All changes were controlled and vetted by the editors of the OGC API specificati
 <div class="sect3">
 <h4 id="_implemented_solution"><a class="anchor" href="#_implemented_solution"></a>A.1.2. Implemented Solution</h4>
 <div class="paragraph">
-<p>52°North implemented and deployed an instance of the 52°North JavaPS software, which is an implementation of the OGC Web Processing Service (WPS) standard and the OGC API - Processes specification. A screenshot of the deployed service is shown in <a href="#img_52n_wps">Figure 8</a>. The software was configured to offer an interface that conforms to the OGC API - Processes specification.</p>
+<p>52°North implemented and deployed an instance of the 52°North JavaPS software, which is an implementation of the OGC Web Processing Service (WPS) standard and the OGC API - Processes specification. A screenshot of the deployed service is shown in <a href="#img_52n_wps">Figure 9</a>. The software was configured to offer an interface that conforms to the OGC API - Processes specification.</p>
 </div>
 <div id="img_52n_wps" class="imageblock text-center">
 <div class="content">
 <img src="images/52n_wps.png" alt="52n wps" width="800">
 </div>
-<div class="title">Figure 8. Swagger Hub page of the OGC API - Processes implementation deployed by 52°North GmbH</div>
+<div class="title">Figure 9. Swagger Hub page of the OGC API - Processes implementation deployed by 52°North GmbH</div>
 </div>
 </div>
 <div class="sect3">
@@ -4661,22 +4784,22 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <p>The implementation showed that the necessary metadata is available to access the map tiles generically.</p>
 </div>
 <div class="paragraph">
-<p><a href="#img_hexagon_2d">Figure 9</a> shows the client accessing a map tiles collection from the server. The tiles are shown in the native CRS of the tile matrix set.</p>
+<p><a href="#img_hexagon_2d">Figure 10</a> shows the client accessing a map tiles collection from the server. The tiles are shown in the native CRS of the tile matrix set.</p>
 </div>
 <div id="img_hexagon_2d" class="imageblock text-center">
 <div class="content">
 <img src="images/hexagon_maptiles_2d.png" alt="hexagon maptiles 2d" width="800">
 </div>
-<div class="title">Figure 9. Hexagon client showing map tiles using native CRS of the tile matrix set</div>
+<div class="title">Figure 10. Hexagon client showing map tiles using native CRS of the tile matrix set</div>
 </div>
 <div class="paragraph">
-<p><a href="#img_hexagon_3d">Figure 10</a> shows the client accessing a map tiles collection from the server. The tiles are requested in their native CRS, but reprojected onto a 3D globe.</p>
+<p><a href="#img_hexagon_3d">Figure 11</a> shows the client accessing a map tiles collection from the server. The tiles are requested in their native CRS, but reprojected onto a 3D globe.</p>
 </div>
 <div id="img_hexagon_3d" class="imageblock text-center">
 <div class="content">
 <img src="images/hexagon_maptiles_3d.png" alt="hexagon maptiles 3d" width="800">
 </div>
-<div class="title">Figure 10. Hexagon client showing map tiles projected onto 3D globe</div>
+<div class="title">Figure 11. Hexagon client showing map tiles projected onto 3D globe</div>
 </div>
 </div>
 <div class="sect3">
@@ -5048,22 +5171,22 @@ In fact team behind GeoSeer suggests that discovery is one of the aspects that c
 <div class="sect3">
 <h4 id="_implemented_solution_40"><a class="anchor" href="#_implemented_solution_40"></a>A.40.2. Implemented Solution</h4>
 <div class="paragraph">
-<p>The MSC implemented and deployed an instance of pygeoapi - a Python server implementation of the emerging OGC API specifications. A screenshot of the landing page of the deployed service is shown in <a href="#img_msc_pygeoapi">Figure 11</a>. The software was configured to offer an interface that conforms to the OGC API - Features and OGC API - Processes specifications.</p>
+<p>The MSC implemented and deployed an instance of pygeoapi - a Python server implementation of the emerging OGC API specifications. A screenshot of the landing page of the deployed service is shown in <a href="#img_msc_pygeoapi">Figure 12</a>. The software was configured to offer an interface that conforms to the OGC API - Features and OGC API - Processes specifications.</p>
 </div>
 <div id="img_msc_pygeoapi" class="imageblock text-center">
 <div class="content">
 <img src="images/msc_pygeoapi.png" alt="msc pygeoapi" width="800">
 </div>
-<div class="title">Figure 11. The landing page of the pygeoapi instance deployed by the Meteorological Service of Canada</div>
+<div class="title">Figure 12. The landing page of the pygeoapi instance deployed by the Meteorological Service of Canada</div>
 </div>
 <div class="paragraph">
-<p>A screenshot of the OpenAPI page of the deployed service is shown in <a href="#img_msc_pygeoapi_openapi">Figure 12</a>.</p>
+<p>A screenshot of the OpenAPI page of the deployed service is shown in <a href="#img_msc_pygeoapi_openapi">Figure 13</a>.</p>
 </div>
 <div id="img_msc_pygeoapi_openapi" class="imageblock text-center">
 <div class="content">
 <img src="images/msc_pygeoapi_openapi.png" alt="msc pygeoapi openapi" width="800">
 </div>
-<div class="title">Figure 12. The OpenAPI definition of the pygeoapi instance deployed by the Meteorological Service of Canada</div>
+<div class="title">Figure 13. The OpenAPI definition of the pygeoapi instance deployed by the Meteorological Service of Canada</div>
 </div>
 </div>
 <div class="sect3">
@@ -5710,7 +5833,7 @@ Test Suites and ongoing "in the open" standards development.</p>
 <div class="content">
 <img src="images/spacebel-0.png" alt="spacebel 0">
 </div>
-<div class="title">Figure 13. DataBio Catalog Server test page</div>
+<div class="title">Figure 14. DataBio Catalog Server test page</div>
 </div>
 </div>
 <div class="sect3">
@@ -5749,7 +5872,7 @@ parameter needed to be added server-side in addition to the <code>maximumRecords
 <div class="content">
 <img src="images/spacebel-1.jpg" alt="spacebel 1">
 </div>
-<div class="title">Figure 14. EO Service and Application metadata (OGC 19-020) from DataBio and OGC Testbed-15 shown in OpenSphere</div>
+<div class="title">Figure 15. EO Service and Application metadata (OGC 19-020) from DataBio and OGC Testbed-15 shown in OpenSphere</div>
 </div>
 <div class="paragraph">
 <p>The OpenSpere client also allows browsing EO Product metadata, visualise corresponding footprints on the map and display metadata properties for a particular EO Product.</p>
@@ -5758,7 +5881,7 @@ parameter needed to be added server-side in addition to the <code>maximumRecords
 <div class="content">
 <img src="images/spacebel-2.jpg" alt="spacebel 2">
 </div>
-<div class="title">Figure 15. EO Product metadata (OGC 17-003) shown in OpenSphere</div>
+<div class="title">Figure 16. EO Product metadata (OGC 17-003) shown in OpenSphere</div>
 </div>
 </div>
 <div class="sect4">
@@ -6156,7 +6279,123 @@ paths:
 </div>
 </div>
 <div class="sect1">
-<h2 id="RevisionHistory"><a class="anchor" href="#RevisionHistory"></a>Appendix B: Revision History</h2>
+<h2 id="OGCAPIHackathonAgenda"><a class="anchor" href="#OGCAPIHackathonAgenda"></a>Appendix B: Invitation to Participate</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_invitation_announcement"><a class="anchor" href="#_invitation_announcement"></a>B.1. Invitation Announcement</h3>
+<div class="imageblock text-center">
+<div class="content">
+<img src="images/OGC_API_Hackathon_2019_-_Sponsors_Banner.png" alt="OGC API Hackathon 2019   Sponsors Banner" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>The Open Geospatial Consortium (OGC) is organizing a Hackathon to develop OGC Application Programming Interface (API) specifications and invites you to participate.</p>
+</div>
+<div class="paragraph">
+<p>The motivation for these OGC APIs is discussed on the OGC Blog at <a href="http://www.opengeospatial.org/blog/2996" class="bare">http://www.opengeospatial.org/blog/2996</a></p>
+</div>
+<div class="paragraph">
+<p>This hackathon will test draft OpenAPI-based standards for coverages, map tiles, processes using a common template based on the OGC API for features, aka WFS3 [1].</p>
+</div>
+<div class="paragraph">
+<p>The event will be instrumental to the evolution of the OWS standards to a modern API based approach, setting the course for open geospatial standards for the next decade. The hackathon will be organized around:</p>
+</div>
+<div class="paragraph">
+<p>Coverages
+Map Tiles
+Processing
+Use of the OGC API for features, aka WFS3, is anticipated during many of the hackathon activities.</p>
+</div>
+<div class="paragraph">
+<p>The outputs of the hackathon will inform the development of the OGC API - Common standard [2], the OGC API - Features standard [3], OGC API – Processes s standard [4], the OGC API – Coverages standard [5] and the OGC API – Map Tiles standard [6].</p>
+</div>
+<div class="paragraph">
+<p>An OGC Hackathon is a collaborative and inclusive event driven by innovative and rapid programming with minimum process and organization constraints to support the development of new applications and open standards.</p>
+</div>
+<div class="paragraph">
+<p>The scope of the event is proposed to include service development and testing, using one or more implementations of OpenAPI/Swagger [7]. Participants are welcome to bring partial or complete implementations of servers or clients to support the Hackathon.</p>
+</div>
+<div class="paragraph">
+<p>A repository for collaborative work across the OGC API teams has been set up [8].</p>
+</div>
+<div class="paragraph">
+<p>The Hackathon will begin on June 20th, 2019 at 09:00am, and end on June 21st, 2019 at 05:00pm. It will be hosted by Ordnance Survey at the Geovation Hub (<a href="https://geovation.uk/" class="bare">https://geovation.uk/</a>) in London. The physical address of the Geovation Hub is:</p>
+</div>
+<div class="paragraph">
+<p>Sutton Yard, 4th Floor</p>
+</div>
+<div class="paragraph">
+<p>65 Goswell road</p>
+</div>
+<div class="paragraph">
+<p>London</p>
+</div>
+<div class="paragraph">
+<p>EC1V 7EN</p>
+</div>
+<div class="paragraph">
+<p>There will be opportunity for joint discussion with all participants on the goals and objectives of the event, as well as final briefing of findings and opinions of the participants. However, the majority of the time will be spent in collaboration between participants in active coding.</p>
+</div>
+<div class="paragraph">
+<p>The Hackathon will be run by Standards Working Group (SWG) Chairs, with support from OGC staff.</p>
+</div>
+<div class="paragraph">
+<p>Attendance priority will be given to those with an implementation or desire to implement the specifications.</p>
+</div>
+<div class="paragraph">
+<p>Register by 1st May 2019 at <a href="https://ogc-api-hack2019.eventbrite.com" class="bare">https://ogc-api-hack2019.eventbrite.com</a></p>
+</div>
+<div class="paragraph">
+<p>If you require funding to support your travel to the hackathon, please also complete the form (by May 1st, 2019) at <a href="https://docs.google.com/forms/d/1c0Zxy1d-9PvuRnfN2R-iIeP3Rcgbc9PMw1UfdN6Kw-A" class="bare">https://docs.google.com/forms/d/1c0Zxy1d-9PvuRnfN2R-iIeP3Rcgbc9PMw1UfdN6Kw-A</a></p>
+</div>
+<div class="paragraph">
+<p>Logistics information can be found at <a href="https://portal.opengeospatial.org/files/?artifact_id=83748" class="bare">https://portal.opengeospatial.org/files/?artifact_id=83748</a></p>
+</div>
+<div class="paragraph">
+<p>Remote Participation information can be found at <a href="https://portal.opengeospatial.org/files/?artifact_id=83864" class="bare">https://portal.opengeospatial.org/files/?artifact_id=83864</a></p>
+</div>
+<div class="paragraph">
+<p>The agenda for the event can be found at <a href="https://portal.opengeospatial.org/files/?artifact_id=83865" class="bare">https://portal.opengeospatial.org/files/?artifact_id=83865</a></p>
+</div>
+<div class="paragraph">
+<p>We&#8217;re looking forward to seeing you at the Hackathon.</p>
+</div>
+<div class="paragraph">
+<p>References:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>WFS3 draft specification, <a href="https://cdn.rawgit.com/opengeospatial/WFS_FES/3.0.0-draft.1/docs/17-069.html" class="bare">https://cdn.rawgit.com/opengeospatial/WFS_FES/3.0.0-draft.1/docs/17-069.html</a></p>
+</li>
+<li>
+<p>OGC API Common specification Github repository, <a href="https://github.com/opengeospatial/oapi_common" class="bare">https://github.com/opengeospatial/oapi_common</a></p>
+</li>
+<li>
+<p>WFS3 Github repository, <a href="https://github.com/opengeospatial/WFS_FES" class="bare">https://github.com/opengeospatial/WFS_FES</a></p>
+</li>
+<li>
+<p>WPS Rest Binding Github repository, <a href="https://github.com/opengeospatial/wps-rest-binding" class="bare">https://github.com/opengeospatial/wps-rest-binding</a></p>
+</li>
+<li>
+<p>OGC API – Coverages Github repository, <a href="https://github.com/opengeospatial/ogc_api_coverages" class="bare">https://github.com/opengeospatial/ogc_api_coverages</a></p>
+</li>
+<li>
+<p>OGC API – Map Tiles Github repository, <a href="https://github.com/opengeospatial/OGC-API-Map-Tiles" class="bare">https://github.com/opengeospatial/OGC-API-Map-Tiles</a></p>
+</li>
+<li>
+<p>OpenAPI Specification 3.0.1, <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md" class="bare">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md</a></p>
+</li>
+<li>
+<p>OGC API Hackathon 2019 Cross Team Github repository, <a href="https://github.com/opengeospatial/OGC-API-Hackathon-2019" class="bare">https://github.com/opengeospatial/OGC-API-Hackathon-2019</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="RevisionHistory"><a class="anchor" href="#RevisionHistory"></a>Appendix C: Revision History</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 3. Revision History</caption>
@@ -6210,7 +6449,7 @@ paths:
 </div>
 </div>
 <div class="sect1">
-<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix C: Bibliography</h2>
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Appendix D: Bibliography</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -6260,7 +6499,7 @@ paths:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-06-28 09:09:07 +0100
+Last updated 2019-07-05 14:31:29 +0100
 </div>
 </div>
 <style>

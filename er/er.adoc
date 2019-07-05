@@ -154,6 +154,7 @@ include::9-key_findings.adoc[]
 
 include::appendix-a.adoc[]
 
+include::appendix-b.adoc[]
 
 // *****************************************************************************
 // Revision History should be the last annex before the Bibliography.
