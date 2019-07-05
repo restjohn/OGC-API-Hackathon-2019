@@ -142,76 +142,72 @@ In addition, Ordnance Survey provided three cut-down datasets for OS MasterMap (
 
 === Hackathon Participants
 
-NOTE: This list will be updated at the start of the Hackathon
+The Hackathon was sponsored by the European Space Agency (ESA) and the Ordnance Survey. <<table_participating_orgs>> lists organizations that participated in the Hackathon.
 
-The Hackathon was sponsored by the European Space Agency (ESA) and the Ordnance Survey.
-
-The following organizations participated in the Hackathon:
-
-* 52°North GmbH
-* akouas
-* ARC
-* Arup
-* blockdore
-* Board Adviser
-* British Antarctic Survey
-* Cicy
-* CREAF
-* CubeWerx Inc.
-* Deimos Space UK
-* developer
-* District Government Cologne - Geobasis NRW
-* Defence Science and Technology Laboratory (Dstl)
-* Duisburg Essen university
-* Ecere Corporation
-* ECMWF
-* El Toro
-* EOS Data Analytics
-* EOX IT Services GmbH
-* Esri UK
-* Eurac Research
-* European Space Agency (ESA)
-* Geobeyond
-* GeoCat B.V.
-* GeoLabs
-* GeoSeer
-* GeoSolutions
-* Geovation
-* Heazeltech
-* Helyx SIS
-* Hexagon
-* Infinity Corporation Limited
-* interactive instruments GmbH
-* ISRIC - World Soil Information
-* Jet Propulsion Laboratory (JPL)
-* JRC, European Commission
-* Land Information New Zealand
-* Landcare Research, New Zealand
-* lat/lon GmbH
-* Met Office
-* Meteorological Service of Canada
-* National Aeronautics and Space Administration (NASA)
-* National Geospatial Intelligence Agency (NGA)
-* National Land Survey of Finland
-* Natural Resources Canada
-* NOAA/NWS
-* Open Geospatial Consortium
-* Ordnance Survey
-* OSGeo
-* Princeton University
-* Princeton University Library
-* Quick Caption
-* rasdaman GmbH
-* Secure Dimensions
-* Sigma Bravo
-* Simms Reeve
-* Sinergise
-* Solenix
-* Spacebel s.a.
-* Strategic Alliance Consulting Inc
-* University College London
-* University of Birmingham
-* University of Münster
-* University of Notre Dame
-* WebGeoDataVore
-* West University of Timisoara
+[#table_participating_orgs,reftext='{table-caption} {counter:table-num}']
+.Technology Integration Experiments (TIE) for OGC APIs
+[cols=",",width="75%",options="header",align="center"]
+|===
+|	Organization Name	| OGC Membership
+|	52°North GmbH	| Member
+|	akouas	| Non-member
+|	ARC	| Non-member
+|	Arup	| Non-member
+|	blockdore	| Non-member
+|	British Antarctic Survey	| Member
+|	CREAF	| Member
+|	CubeWerx Inc.	| Member
+|	Deimos Space UK	| Member
+|	District Government Cologne - Geobasis NRW	| Non-member
+|	Defence Science and Technology Laboratory (Dstl)	| Member
+|	Duisburg Essen university	| Non-member
+|	Ecere Corporation	| Member
+|	ECMWF	| Member
+|	El Toro	| Non-member
+|	EOS Data Analytics	| Non-member
+|	EOX IT Services GmbH	| Member
+|	Esri UK	| Member
+|	Eurac Research	| Non-member
+|	European Space Agency (ESA)	| Member
+|	Geobeyond	| Non-member
+|	GeoCat B.V.	| Member
+|	GeoLabs	| Non-member
+|	GeoSeer	| Non-member
+|	GeoSolutions	| Member
+|	Geovation	| Member
+|	Heazeltech	| Member
+|	Helyx SIS	| Member
+|	Hexagon	| Member
+|	Infinity Corporation Limited	| Non-member
+|	interactive instruments GmbH	| Member
+|	ISRIC - World Soil Information	| Member
+|	Jet Propulsion Laboratory (JPL)	| Member
+|	JRC, European Commission	| Member
+|	Land Information New Zealand	| Member
+|	Landcare Research, New Zealand	| Member
+|	lat/lon GmbH	| Member
+|	Met Office	| Member
+|	Meteorological Service of Canada	| Member
+|	National Aeronautics and Space Administration (NASA)	| Member
+|	National Geospatial Intelligence Agency (NGA)	| Member
+|	National Land Survey of Finland	| Member
+|	Natural Resources Canada	| Member
+|	NOAA/NWS	| Member
+|	Ordnance Survey	| Member
+|	OSGeo	| OGC Alliance Partner
+|	Princeton University	| Non-member
+|	Princeton University Library	| Non-member
+|	Quick Caption	| Non-member
+|	rasdaman GmbH	| Member
+|	Secure Dimensions	| Member
+|	Sigma Bravo	| Member
+|	Sinergise	| Non-member
+|	Solenix	| Member
+|	Spacebel s.a.	| Member
+|	Strategic Alliance Consulting Inc	| Member
+|	University of Birmingham	|
+|	University of Münster	| Member
+|	University of Notre Dame	| Member
+|	WebGeoDataVore	| Non-member
+|	West University of Timisoara	| Member
+|===

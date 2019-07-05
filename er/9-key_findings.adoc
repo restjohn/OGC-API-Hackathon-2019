@@ -11,7 +11,7 @@ The decision to hold the OGC API Hackathon was made by the TC at the 2019 TC mee
 
 [#img_gantt,reftext='{figure-caption} {counter:figure-num}']
 .A Gantt chart of the planning and execution of the hackathon
-image::images/gantt.png[width=800,align="center"]
+image::images/ganttlibre.png[width=800,align="center"]
 
 During the hackathon, the process involved alternation between briefings, discussions and coding. On the first day of the hackathon, three back-briefs were held, that is one in the morning, another in the afternoon and another in the evening. These briefings provided an opportunity for issues to be discussed across teams. Agreements and resolutions from the discussions triggered by the briefings were then fed back into the team-specific work.
 
@@ -49,7 +49,13 @@ The agenda for the hackathon is presented in the next subsection.
 
 ==== Organization
 
-By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses. The spread of responses to the hackathon is shown in <<img_interests>>.
+By the event date, 76 individuals had been registered to participate in-person and 35 participants had been registered to participate remotely. The participants represented 60 organizations, 41 of those organizations are OGC members, one of the organizations is an OGC Alliance Partner and the remaining 18 organizations are non-members. The proportion of OGC members to alliance partners and non-members is illustrated in <<img_membership>>.
+
+[#img_membership,reftext='{figure-caption} {counter:figure-num}']
+.OGC membership of participating organizations
+image::images/membership.png[width=400,align="center"]
+
+A questionnaire sent out just before the hackathon to collect information about which OGC API specifications the participants would focus on received 27 responses. The spread of responses to the hackathon is shown in <<img_interests>>.
 
 [#img_interests,reftext='{figure-caption} {counter:figure-num}']
 .Participants' interests

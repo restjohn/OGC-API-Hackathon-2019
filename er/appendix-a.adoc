@@ -14,8 +14,6 @@ include::participanting-organizations/blockdore.adoc[]
 
 include::participanting-organizations/BritishAntarcticSurvey.adoc[]
 
-include::participanting-organizations/Cicy.adoc[]
-
 include::participanting-organizations/CREAF.adoc[]
 
 include::participanting-organizations/CubeWerxInc.adoc[]
@@ -105,8 +103,6 @@ include::participanting-organizations/SecureDimensions.adoc[]
 
 include::participanting-organizations/SigmaBravo.adoc[]
 
-include::participanting-organizations/SimmsReeve.adoc[]
-
 include::participanting-organizations/Sinergise.adoc[]
 
 include::participanting-organizations/Solenix.adoc[]
@@ -114,8 +110,6 @@ include::participanting-organizations/Solenix.adoc[]
 include::participanting-organizations/Spacebel.adoc[]
 
 include::participanting-organizations/StrategicAllianceConsultingInc.adoc[]
-
-include::participanting-organizations/UniversityCollegeLondon.adoc[]
 
 include::participanting-organizations/UniversityofBirmingham.adoc[]
 
