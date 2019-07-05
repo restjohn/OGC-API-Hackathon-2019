@@ -1,17 +1,47 @@
 [[OSGeo]]
 === OSGeo
-
-
-
-TBA
+The Open Source Geospatial Foundation (OSGeo) is a not-for-profit organization
+whose mission is to foster global adoption of open geospatial technology by
+being an inclusive software foundation devoted to an open philosophy and
+participatory community driven development.
 
 ==== Motivation to Participate
 
-TBA
+https://www.osgeo.org/projects[OSGeo projects] have a long history of
+implementing OGC standards. Examples include (but are not limited to)
+PostGIS, QGIS, MapServer, GeoServer and many others.
+
+The recent efforts around modernizing the OGC API standards provide
+opportunities for any project to implement OGC standards with a lower barrier
+to entry.  In addition, the clean break approach provides opportunity to
+streamline codebases and implementations with less dependencies.  Finally,
+OSGeo projects already provide reference implementations for numerous OGC
+standards.  Participating at early stages of specification development allows
+for testing of approaches as well as leading the initial support of the
+standards into the FOSS4G community ecosystem.
 
 ==== Implemented Solution
 
-TBA
+The below provides a summary of participating projects:
+
+* pycsw
+** meetings on CAT 4.0
+** CAT 4.0 SWG will be created at OGC TC next week (Leuven)
+** pycsw 3 will be the LTR for CSW 2/3
+** pycsw 4 will align with CAT 4.0
+** discussions / testing on whether pycsw 4 is built with pygeoapi underneath with addition of full search conformance class
+* pygeoapi
+** continued implementation of WPS REST binding (jobs, results)
+** implementation of process manager to support asynchronous processing and job storage
+** write documentation
+* ZOO-Project:
+** test implementation available at https://demo.mapmint.com/WPS3/
+** Swagger-ui demonstration available at https://demo.mapmint.com/swagger-ui/dist/
+** Demo UI using both pygeoapi demo server (https://demo.pygeoapi.io/master/) and, ZOO-Project test implementation server for processing, avallable at https://demo.mapmint.com/examples3/spatialtools.html (based on old code from https://zoo-project.org)
+** Sample execute requests for using Orfeo ToolBox BandMath application using wps-rest-api available at http://www.zoo-project.org/trac/wiki/OGC_Hackathon_2019
+* EOxServer:
+** Very basic OGC API - Coverages implementation available at https://ows.eox.at/openapi/oapi/
+** Good discussion and progress on OGC API - Coverages in general
 
 ==== Proposed Alternatives
 
@@ -19,9 +49,15 @@ TBA
 
 ==== Experiences with OGC API Specifications
 
-TBA
+The abovementioned projects (as well as others) are already implementing
+the OGC API Specifications and are actively participating in discussions
+to address gaps and improvements.  Making the specification development
+process openly available on GitHub (as well as Gitter for chat) provides
+more opportunities for non-OGC members to provide input/feedback.
 
 ==== Other Impressions & Recommendations
 
-TBA
-
+It is recommended to hold similar Hackathon events more regularly given
+the synergies and progress made during such a focused event.  It is also
+recommended for Hackathons to be longer than 2 days in duration which may
+result in increased participation so as to justify travel.
