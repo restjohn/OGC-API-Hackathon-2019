@@ -44,10 +44,11 @@ All questions regarding this document should be directed to the editor or the co
 |Chris Little | Met Office | Contributor
 |Yves Coene | Spacebel | Contributor
 |Adam Branscomb | Esri UK | Contributor
+|Adam Martin | Esri | Contributor
 |Joan Maso | CREAF | Contributor
 |Stephan Meißl | EOX | Contributor
-|TBA | TBA | Contributor
-|TBA | TBA | Contributor
+|Tom Kralidis | Open Source Geospatial Foundation (OSGeo) | Contributor
+|Alexander Jacob | Eurac Research | Contributor
 |TBA | TBA | Contributor
 |TBA | TBA | Contributor
 |TBA | TBA | Contributor
