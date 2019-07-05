@@ -14,9 +14,10 @@ This hackathon will test draft OpenAPI-based standards for coverages, map tiles,
 
 The event will be instrumental to the evolution of the OWS standards to a modern API based approach, setting the course for open geospatial standards for the next decade. The hackathon will be organized around:
 
-Coverages
-Map Tiles
-Processing
+* Coverages
+* Map Tiles
+* Processing
+
 Use of the OGC API for features, aka WFS3, is anticipated during many of the hackathon activities.
 
 The outputs of the hackathon will inform the development of the OGC API - Common standard [2], the OGC API - Features standard [3], OGC API – Processes s standard [4], the OGC API – Coverages standard [5] and the OGC API – Map Tiles standard [6].
@@ -72,3 +73,127 @@ Appendix B - References:
 7. OpenAPI Specification 3.0.1, https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md
 
 8. OGC API Hackathon 2019 Cross Team Github repository, https://github.com/opengeospatial/OGC-API-Hackathon-2019
+
+=== Questionnaires
+
+This section presents the questionnaires that were presented to hackathon participants to facilitate organization of the event.
+
+=== Travel Support Request
+
+Software Development Experience
+
+* [ ] Coding is not my day to day job, but I often hack on things to solve key problems.
+* [ ] I am fluent in a variety of program languages and have shipped production systems with thousands of users.
+* [ ] I have several years of professional software development experience and write code almost every day.
+* [ ] I am comfortable with code, and can copy and paste pieces or script things together.
+* [ ] Other
+
+
+Experience	with WFS, WCS, WMTS or WPS Specifications
+
+* [ ] No experience with any of the web services listed (totally ok! We want you too!)
+* [ ] Have used web services based on one or more of the standards listed above
+* [ ] Have created a client implementation of one or more of the web service standards listed above
+* [ ] Have created a server implementation of one or more of the web service standards listed above
+* [ ] Have implemented web services and API's that are not based on OGC standards
+* [ ] Other
+
+What is your LinkedIn profile link
+
+What is your GitHub profile link
+
+Are you a Chair of one or more of the following OGC Standards Working Groups: WPS SWG, WCS SWG, WMS SWG, WFS SWG ?
+
+* [ ] Yes
+* [ ] No
+
+Are you an editor of one or more of the following specifications: OGC API - Coverages, OGC API - Features, OGC API - Processes, OGC API - Map Tiles?
+
+* [ ] Yes
+* [ ] No
+
+Have you implemented one or more of the following draft specifications: OGC API - Coverages, OGC API - Features, OGC API - Processes, OGC API - Map Tiles?
+
+* [ ] Yes
+* [ ] No
+
+Do you agree to the terms in the OGC Privacy Policy at https://www.opengeospatial.org/ogc/policies/privacy ?
+
+* [ ] Yes
+* [ ] No
+
+
+==== Infrastructure
+
+Which challenge are you proposing to work on?
+
+* [ ] OGC API - Processes
+* [ ] OGC API - Common
+* [ ] OGC API - Map Tiles
+* [ ] OGC API - Coverages
+* [ ] Other
+
+How much data (in Gigabytes) are you bringing to the Hackathon?
+
+Does the data you are bringing to the Hackathon contain any personal or personally identifiable information that would fall under GDPR?
+
+* [ ] Yes
+* [ ] No
+
+Are you bringing any commercially sensitive data to the Hackathon?
+
+* [ ] Yes
+* [ ] No
+
+Which base image will your containers be built on? Include operating system or distribution if known.
+
+What is the minimum required RAM for running and testing your software?
+
+* [ ] 1 GB
+* [ ] 2 GB
+* [ ] 4 GB
+* [ ] More than 4GB (Please justify this requirement in the Notes section)
+
+What is the minimum number of CPUs required to run your software?
+
+* [ ] 1
+* [ ] 2
+* [ ] More than 2 (Please justify this requirement in the Notes section)
+
+What is the minimum storage (in Gigabytes) you will require for running and testing your software?
+
+Please rate your team's Microsoft Azure knowledge
+
+* [ ] None
+* [ ] Other Cloud Knowledge eg AWS
+* [ ] Azure Developer
+
+
+NOTES: anything else you think we should know about your requirements for the environment your application and data require for the Hackathon?
+
+==== Additional Information
+
+What is your Github Handle?
+
+Dietary restrictions
+
+* [ ] None
+* [ ] Vegetarian
+* [ ] Vegan
+* [ ] Kosher
+* [ ] Gluten-free
+* [ ] Other
+
+
+Which team will you work mostly with during the Hackathon?
+
+* [ ] OGC API - Processes
+* [ ] OGC API - Common
+* [ ] OGC API - Map Tiles
+* [ ] OGC API - Coverages
+* [ ] Other
+
+Do you agree to the terms in the OGC Privacy Policy at https://www.opengeospatial.org/ogc/policies/privacy ?
+
+* [ ] Yes
+* [ ] No

@@ -155,7 +155,7 @@ In some hackathons prizes are awarded, ranging from a few hundred to a https://t
 * "To get more information about the direction followed by the working groups for the different standards, as well as to get answers to some questions we have got about the OGC API - Processes specification specifically"
 * "To help solve the discoverability problem...to facilitate making life easier for finding data through the new OGC API specifications"
 * "To share [our] expertise as a long-term implementer and user, to support the advancements of OGC standards related to map tiles, coverages and processes"
-* "We would like the implemented APIs to be consistent with, and conformant to, any OGC API standards"
+* "We would like the implemented APIs to be consistent with, and conform to any OGC API standards"
 
 The sample of statements presented above suggests that the advancement of open standards, on its own, can be useful as a motivator for participation. In situations where collaboration across organisations is not a key consideration, a competitive hackathon offering prizes would be appropriate.
 
