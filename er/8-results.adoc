@@ -55,11 +55,13 @@ There was a discussion about whether OGC API - Common should support the CRS:84 
 
 The participants discussed what role version numbers would play within an OGC API, recognising that the current suite of OGC web service standards require implementations to indicate the supported versions as a query parameter. The participants determined that the version of the standard would be reflected in the conformance class. Each conformance class would be made uniquely identifiable and any change to that conformance class would relate in the creation of a new conformance class. It would therefore not be necessary to indicate the version on the standard on the path or the query parameters of an implementation of the OGC APIs.
 
-The participants observed that there is a need for something like CRS:84 that has ellipsoid height. EPSG:4327 was suggested as a possible basis for such a CRS, with the caveat that it has been deprecated. It was agreed to discuss the issue of a height or elevation CRS with the WFS SWG and the CRS DWG at the OGC TC meeting in Leuven.
+The participants observed that there is a need for a CRS that is based on CRS:84 but that includes ellipsoidal height. EPSG:4327 was suggested as a possible basis for such a CRS, with the caveat that it has been deprecated. It was agreed to discuss the issue of a height or elevation CRS with the WFS/FES SWG and the CRS DWG at the OGC TC meeting in Leuven. The WFS/FES SWG passed a motion at the OGC TC meeting in Leuven, the week after the hackathon, proposing a new CRS named CRS84h that would be based on CRS:84 and include an additional axis for ellipsoidal height.
+
+There was a discussion on whether the `/api` resource should be made mandatory across all OGC API specifications. Earlier in the hackathon it was observed that some of the OGC API specifications included the `/api` resource whereas others did not. Participants supporting the addition of `/api` as a mandatory resource pointed out that the resource would ensure that the API definition is always current and complete. In contrast, participants supporting the optional use of the `/api` resource pointed out that the API definition can already be found through the use of the `rel="service"` link provided by the landing page. It was therefore agreed that the `/api` resource would be optional.
 
 === Technology Integration Experiments (TIE)
 
-The following table presents Technology Integration Experiments (TIE) that were completed during the Hackathon.
+Several Technology Integration Experiments (TIE) were completed during the Hackathon. <<table_ties>> shows the services and client applications that were deployed and bound together during the hackathon. The table also identifies the OGC APIs that were implemented to achieve the integration.
 
 [#table_ties,reftext='{table-caption} {counter:table-num}']
 .Technology Integration Experiments (TIE) for OGC APIs

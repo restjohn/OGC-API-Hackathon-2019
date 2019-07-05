@@ -16,6 +16,9 @@ For the purposes of this report, the definitions specified in Clause 4 of the OW
 
  a document (or set of documents) that defines or describes an API and conforms to the OpenAPI Specification [derived from the OpenAPI Specification]
 
+&#9679; commit  ::
+ As a noun, a commit is a single point in the Git history that represents a "revision" or "version" [derived from https://git-scm.com/docs/gitglossary].
+
 &#9679; coverage  ::
 
  feature that acts as a function to return values from its range for any direct position within its spatiotemporal domain, as defined in OGC Abstract Topic 6 (OGC 07-011).

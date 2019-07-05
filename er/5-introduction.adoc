@@ -126,6 +126,20 @@ Participants were advised to bring their own laptops to the hackathon. To suppor
 * Participants could deploy services into their own Cloud infrastructure.
 * By prior arrangement, participants could deploy services into Ordnance Survey-sponsored Cloud infrastructure.
 
+===== Ordnance Survey-sponsored Cloud infrastructure
+
+A survey was emailed to each Hackathon participant prior to the event.  Based on the results of the survey, four virtual machines were created by Ordnance Survey for use during the Hackathon by the nine users who replied specifying a need to use Azure based architecture. An illustration of the configuration of the infrastructure is presented in <<img_azure>>.
+
+[#img_azure,reftext='{figure-caption} {counter:figure-num}']
+.OGC Hackathon Azure Infrastructure sponsored by Ordnance Survey
+image::images/azure.png[width=800,align="center"]
+
+Pairs of servers were configured with the CentOS 7.6 and Ubuntu 18.04 Long Term Support (LTS) operating systems to meet the requirements specified within the survey.  Each of the nine users was given their own 100GB Azure File share, mounted across to each virtual machine with Network File System (NFS) to enable cross-server working.
+
+Each server was installed with a similar set of software: Corretto, Docker, Docker Compose & Python 3.7.
+
+In addition, Ordnance Survey provided three cut-down datasets for OS MasterMap (Highways, TOPO & Water Networks) covering the areas of interest being used during the Hackathon.  Access to these datasets was made available using secure tokens.
+
 === Hackathon Participants
 
 NOTE: This list will be updated at the start of the Hackathon

@@ -58,27 +58,75 @@ NOTE: The Ordnance Survey provided the Microsoft Teams platform for supporting p
 
 ===== Knowledge Capture
 
+Github played a key role in the documentation and sharing of knowledge during the hackathon. Github is a development environment built on top of Git - a distributed version control and source code management (SCM) system. In addition to providing a repository for the draft OGC API specifications, Github also provided the following useful capabilities:
+
+* Statistics
+** Commits
+** Additions and deletions
+* Previews of differences between files and their revisions
+* Access control
+* Wiki
+* Notifications of requests for changes and accepted changes
+
+NOTE: A commit is a single point in the Git history that represents a "revision" or "version".
+
 The various teams involved in the hackathon used the Github repositories of their relevant OGC API specifications to log issues that were identified during discussions. Note that the hackathon took place at the end of the week, and thus some of the participants were only able to log issues at the beginning of the week after the hackathon. <<img_issues>> presents a graph of the total number of issues logged in Github repositories on the lead up to the hackathon event, during the event and the week after the event. The effect of the hackathon is clearly visible from the 'spike' in the number of issues logged during the two days of the hackathon event (i.e. June 20th & 21st).
 
 [#img_issues,reftext='{figure-caption} {counter:figure-num}']
 .The total number of issues logged in Github repositories for Processes, Map Tiles, Common and Coverages
 image::images/issues.png[width=800,align="center"]
 
-Changes to the OGC API specifications were made on the lead up to the hackathon, and during the event. <<img_commits>> presents the total number of commits in Github repositories for OGC APIs on the lead up to the hackathon event, during the event and the week after the event. The commits represent more than 4600 additions and 3200 deletions to the draft API specifications.
+Changes to the OGC API specifications were made on the lead up to the hackathon, and during the event. <<img_commits>> presents the total number of commits in Github repositories for OGC APIs on the lead up to the hackathon event, during the event and the week after the event. The commits represent more than 4600 additions and 3200 deletions to the draft API specifications. The number of additions and deletions was determined from the commits made to Github repositories for Processes, Map Tiles, Common and Coverages.
 
 [#img_commits,reftext='{figure-caption} {counter:figure-num}']
 .The total number of commits made to Github repositories for Processes, Map Tiles, Common and Coverages
 image::images/commits.png[width=800,align="center"]
 
+NOTE: All changes were controlled and vetted by the editors of the OGC API specifications.
+
 It should be noted that although the hackathon resulted in additions and deletions to the draft API specifications, the outputs of the hackathon are subject to vetting and approval processes of the relevant OGC Standards Working Groups. Therefore there is always the possibility that the Standards Working Groups may reject all of the outputs of the hackathon. To an extent, such an outcome is mitigated by the participation of several members of the Standards Working Group in the hackathon. Further, appointing the editors of the OGC API specifications as the Team Leads of the hackathon appeared to improve the likelihood of acceptance of changes made during the hackathon.
 
 === Experiences
 
-TBA
+The first objective of the hackathon was to develop, deploy and test services/clients that support OGC APIs. The hackathon participants were able to develop and deploy services and clients during the hackathon, as documented in <<table_ties>>. The participants were also able to successfully bind together many of the services with client applications provided by other participants, using OGC APIs. This confirms that the first objective of the hackathon was fully met.
+
+A second objective of the hackathon was to suggest improvements for a common core. Some of the discussions around the OGC API - Common specification included default support for the CRS:84 coordinate system and the role of version numbers. The discussion that began at the hackathon on the need for a new CRS that adds ellipsoidal height to CRS:84 has resulted on a proposal being passed by the WFS/FES SWG. Further, the discussion on the role of the `/api` resource has resulted in consensus between the various SWGs that the `/api` resource is optional. These discussions and the resolutions resulting from them confirm that the second objective of the hackathon was also met.
+
+A third objective of the hackathon was to define rules/guidance that can be documented. Several edits to the OGC API specifications were made on the lead up to the hackathon, and during the event. These edits included additions and deletions of some of the rules and guidance in the specifications, as well as improvements to some of the existing rules and guidance. More than 4600 additions and 3200 deletions to the draft API specifications as an immediate result of the hackathon, thereby confirming that the third objective of the hackathon was also met.
+
+A fourth objective of the hackathon was to validate work that has been completed to date. The successful implementation, by multiple different organisations, of the OGC API specifications supported the validation of the prior work (i.e. the approach taken for the various OGC API specifications). The hackathon also provided the opportunity to invalidate or rethink specific aspects of some of the specifications. The fact that the different specifications extended the OGC API - Common specification, supports the view that the approach taken for organizing and structuring the OGC API specifications was validated by the hackathon. This confirms that the fourth objective of the hackathon was also met.
+
+A fifth objective of the hackathon was to contribute to the GitHub repositories. <<img_commits>> presents the total number of commits made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. <<img_issues>> presents the total number of issues made to Github repositories for OGC APIs for Processes, Map Tiles, Common and Coverages. The commits and issues of the lead up to the hackathon and during the hackathon confirm that the fifth objective of the hackathon was also met.
+
+This subsection has reflected on all of the objectives of the hackathon and confirmed that they were all met. The next section identifies lessons learnt from holding the hackathon.
 
 === Lessons learnt
 
-TBA
+==== Duration of the hackathon
+
+Two of the participants expressed concerns that the duration of the hackathon was rather short. There was a suggestion that a minimum three days may have been more appropriate. To an extent, the approach taken to incrementally ramp up towards the hackathon date addressed some of these concerns. However, it is accepted that a three-day hackathon could have led to more outputs. A three-day hackathon could cover the following, for example:
+
+* Day 1: Discussions and revisions to the draft standards
+* Day 2: Implementation of the draft standards
+* Day 3: Design and implementation of Executable Test Suites of the draft standards
+
+==== Scheduling of the hackathon
+
+It cannot be ignored that the scheduling of the hackathon during the week preceding the OGC TC meeting in nearby Leuven made it possible for some of the participants to travel to both events. This aspects of the scheduling made a difference for participants that had travelled from abroad. In some cases however the scheduling meant that some interested parties could not attend the hackathon due to its proximity, in scheduling, to the TC meeting. Overall however the proximity to the TC meeting proved to be helpful.
+
+==== Motivation to participate
+
+
+In some hackathons prizes are awarded, ranging from a few hundred to a https://techcrunch.com/2013/11/21/two-harvard-university-alum-win-salesforce-1m-hackathon-prize-at-dreamforce-for-mobile-service-to-create-reports[million dollars] (USD). In organizing the OGC API Hackathon, OGC staff considered the goal of the hackathon was in relation to the likely motivation of participants. Given that the goal of the hackathon was to advance the OGC API specification, collaboration between different organizations became a key consideration. A decision was therefore made to offer travel support to any participants that applied for such support, instead of offering a competition prize. A review of the motivation for various participants to take part in the hackathon supported this devision. Below are some examples of the motivation of some of the participants to participate, extracted from <<OGCAPIImplementations>>:
+
+* "Evolution of the OGC specifications to a modern, developer-friendly API is essential"
+* "We wanted to participate in this hackathon event in order to understand well the intent and orientation of OGC APIs, as well as to align as much as possible the implementations, in order to make them compatible"
+* "To get more information about the direction followed by the working groups for the different standards, as well as to get answers to some questions we have got about the OGC API - Processes specification specifically"
+* "To help solve the discoverability problem...to facilitate making life easier for finding data through the new OGC API specifications"
+* "To share [our] expertise as a long-term implementer and user, to support the advancements of OGC standards related to map tiles, coverages and processes"
+* "We would like the implemented APIs to be consistent with, and conformant to, any OGC API standards"
+
+The sample of statements presented above suggests that the advancement of open standards, on its own, can be useful as a motivator for participation. In situations where collaboration across organisations is not a key consideration, a competitive hackathon offering prizes would be appropriate.
 
 === What are the next steps?
 

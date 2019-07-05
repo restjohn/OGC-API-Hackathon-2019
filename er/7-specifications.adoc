@@ -1,7 +1,7 @@
 [[OGCAPISpecifications]]
 == OGC API Specifications
 
-This chapter describes each of the OGC API specifications that were advanced by the Hackathon. The section presents an overview of each specification and is not intended to be a substitute for reading the complete specification.
+This chapter describes each of the draft OGC API specifications ahead of the Hackathon. The section presents an overview of each specification and is not intended to be a substitute for reading the complete specification.
 
 === OGC API - Common
 
