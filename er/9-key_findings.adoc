@@ -78,7 +78,7 @@ As discussed in <<Architecture>>, the software products that were deployed by th
 * Solenix WPS Demo Client
 * Esri OGC API-Tiles Demo Client
 
-The deployed technologies includes software implemented in Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in C++. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
+The deployed technologies includes software implemented in C, C++, Python, Java, and NodeJS. Some of the deployed technologies include Python adapters to software implemented in C++. This variety of programming languages shows that the OGC API specifications are independent of any programming language.
 
 ==== Information
 
