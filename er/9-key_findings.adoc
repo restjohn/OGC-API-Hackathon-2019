@@ -15,7 +15,7 @@ image::images/ganttlibre.png[width=800,align="center"]
 
 During the hackathon, the process involved alternation between briefings, discussions and coding. On the first day of the hackathon, three back-briefs were held, that is one in the morning, another in the afternoon and another in the evening. These briefings provided an opportunity for issues to be discussed across teams. Agreements and resolutions from the discussions triggered by the briefings were then fed back into the team-specific work.
 
-The agenda for the hackathon is presented in the next subsection.
+The agenda for the hackathon is presented below.
 
 ===== Agenda
 
