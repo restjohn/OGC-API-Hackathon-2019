@@ -200,7 +200,7 @@ The Hackathon was sponsored by the European Space Agency (ESA) and the Ordnance 
 |	Quick Caption	| Non-member
 |	rasdaman GmbH	| Member
 |	Secure Dimensions	| Member
-|	Sigma Bravo	| Member
+|	Sigma Bravo	| Non-member
 |	Sinergise	| Non-member
 |	Solenix	| Member
 |	Spacebel s.a.	| Member
