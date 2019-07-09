@@ -56,6 +56,11 @@ The Esri client application is a simple Leaflet application which connects to th
 TBA
 
 
-==== TBA
+=== Validation Implementations
 
-TBA
+==== TEAM Engine
+
+TEAM Engine (Test, Evaluation, And Measurement Engine) is a Java-based application for testing web services and other information resources. It executes test suites developed using the popular TestNG framework, OGC Compliance Test Language (CTL) scripts, and possibly other JVM-friendly languages. It is lightweight and easy to run from the command-line or as a web application.
+TEAM Engine can be used to test almost any type of service or information resource. It is the official test harness used by the Open Geospatial Consortium's (OGC) http://cite.opengeospatial.org/[compliance program]. Visit the http://opengeospatial.github.io/teamengine/[project documentation website] for more information.
+
+Currently, there is a test suite available to verify "OGC API - Features" service implementations. The test suite is written in Java using the TestNG framework and https://github.com/opengeospatial/ets-wfs30[source code is publicly available]. Also, there is a public installation of the test suite on http://cite.opengeospatial.org/te2/[OGC CITE Beta environment].
