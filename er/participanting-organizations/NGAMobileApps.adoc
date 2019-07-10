@@ -2,9 +2,9 @@
 === U.S. National Geospatial-Intelligence Agency, GEOINT Services, Mobile Apps
 
 Developers::
-https://github.com/bosborn[Brian Osborn]:::
+https://github.com/bosborn[Brian Osborn], http://www.caci.com/bit-systems/[CACI-BITS]:::
     Author of NGA's published open source https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile applications
-https://github.com/restjohn[Robert St. John]:::
+https://github.com/restjohn[Robert St. John], http://www.caci.com/bit-systems/[CACI-BITS]:::
     Developer on NGA's open source https://github.com/ngageoint/MAGE[MAGE] mobile, server, and web applications
 
 ==== Motivation to Participate
