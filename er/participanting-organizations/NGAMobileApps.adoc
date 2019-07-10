@@ -131,4 +131,26 @@ the content types they support.  This would also allow clients to obtain the
 `alternate` links with a `HEAD` request as opposed to a more expensive `GET`
 request.
 
-===== DescribeFeatureType
+===== Missing `DescribeFeatureType`
+While developing the OGCAF client at the Hackathon, we questioned the lack of
+a `DescributeFeatureType` operation in OGCAF analogous to that of WFS 2.  Our
+use case was to request OGCAF features to import them into GeoPackage feature
+tables.  The initial concept assumed the client would request information on
+the type of features in a feature collection to setup the database schema in a
+GeoPackage before beginning to import the features themselves to the tables.
+Without an explicit `DescribeFeatureType` operation to describe the feature
+structure, the solution was to build the schema on-the-fly as the client
+encountered features and their properties, which required quite complex
+transactions in the context of a GeoPackage relational database.
+
+Our server implementation took the approach of specialized schema components in
+the OpenAPI document for each collection.  That produced quite an unwieldy
+OpenAPI document and could make the data model more difficult for generic
+clients to construct.
+
+We observed that this is an https://github.com/opengeospatial/WFS_FES/issues/56[open issue].
+There are as some https://github.com/opengeospatial/WFS_FES/issues/56#issuecomment-371191281[comments]
+on the issue that reflect the problems in our server implementation's OpenAPI
+document.  The discussion on the issue appears to have led to the conclusion
+that some `DescribeFeatureType` operation should be part of the OGCAF Core spec,
+and we agree.
