@@ -52,29 +52,24 @@ specific parsing requirements
 ** facilitates HTTP/1.1 agent-driven negotiation for non-user-facing clients
 whose initial request to a service returns an HTML response
 ** enables the use of XPath and XSLT on HTML documents
-* section 5.5.3: core response requirements defined using OpenAPI JSON Schema
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_references_to_openapi_components_in_normative_statements[Section 5.5.3]: core response requirements defined using OpenAPI JSON Schema
 fragments imply a response media type of `application/json`.  Is this actually
 the requirement?  Either way, this requires more specific explanation.
-* section 7.2: Is the core requirement for the landing page to return JSON by
-default?
-* Section 7.2.2, landing page response: If following RFC 8288, the link relation
-types `conformance` and `data` should be URIs, according to RFC 8288, section
-2.1.2, because they are "extension" link types that do not appear in the
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_response[Section 7.2.2], landing page response:
+** Is the core requirement for the landing page to return JSON by default?
+** If following RFC 8288, the link relation types `conformance` and `data`
+should be URIs, according to RFC 8288, https://tools.ietf.org/html/rfc8288#section-2.1.2[section 2.1.2],
+because they are "extension" link types that do not appear in the
 https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA Registry].
-* section 7.3.2 requirement 4 specifies use of `Accept` header for content
-negotiaion of the api documentation (service-desc, service-doc)
-** again, one of either service-desc or service-doc should be sufficient. what
-happens when requesting service-doc with Accept application/json, or
-service-desc with Accept text/html?
 * http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_declaration_of_conformance_classes[section 7.4]: Ostensibly, the response for the `/conformance` path must be a
 JSON document, but the language in the spec is not clear.  Is that the case?
 If so, the requirements should state the required `Content-Type` of the response
 is `application/json` and the JSON document must be valid with respect to the
 https://raw.githubusercontent.com/opengeospatial/WFS_FES/master/core/openapi/schemas/conf-classes.yaml[OpenAPI JSON Schema].
-* section 7.9: another reference to content negotiation as defined by HTTP/1.1.
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#encodings[Section 7.9]: another reference to content negotiation as defined by HTTP/1.1.
 HTTP/1.1 content negotiation is quite abstract without many concrete
 requirements.  The _NOTE_ at the end of the section gives the `accept` and `f`
-query parameters as examples.
+query parameters as examples, but not requirements.  See below.
 * Require specific attributes on HTML links so a dynamic client can easily parse
 and inspect them, and to enable automated testing of the HTML conformance class
 rather than having to
@@ -133,7 +128,7 @@ request.
 
 ===== Missing `DescribeFeatureType`
 While developing the OGCAF client at the Hackathon, we questioned the lack of
-a `DescributeFeatureType` operation in OGCAF analogous to that of WFS 2.  Our
+a `DescribeFeatureType` operation in OGCAF analogous to that of WFS 2.  Our
 use case was to request OGCAF features to import them into GeoPackage feature
 tables.  The initial concept assumed the client would request information on
 the type of features in a feature collection to setup the database schema in a
