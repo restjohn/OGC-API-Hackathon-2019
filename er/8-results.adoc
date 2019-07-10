@@ -65,27 +65,29 @@ Several Technology Integration Experiments (TIE) were completed during the Hacka
 
 [#table_ties,reftext='{table-caption} {counter:table-num}']
 .Technology Integration Experiments (TIE) for OGC APIs
-[cols=",,,,,,,",width="100%",options="header",align="center"]
+[cols=",,,,,,,,",width="100%",options="header",align="center"]
 |===
-|Services\Client | Hexagon | Helyx | SigmaBravo | Esri | Solenix | EURAC | Sinergise
+|Services\Client | Hexagon | Helyx | SigmaBravo | Esri | Solenix | EURAC | Sinergise | GeoPackage/MapCache
 
-|52 North |  | Processes  | | | Processes | |
+|52 North |  | Processes  | | | Processes | | |
 
-|CubeWerx |  | Processes |  | | Processes | |
+|CubeWerx |  | Processes |  | | Processes | | |
 
-|Esri | Map Tiles |   | Map Tiles | Map Tiles | | |
+|Esri | Map Tiles |   | Map Tiles | Map Tiles | | | |
 
-|Helyx |  | Processes  |  | | | |
+|Helyx |  | Processes  |  | | | | |
 
-|pygeoapi |  |  | Features | | Processes | |
+|pygeoapi |  |  | Features | | Processes | | | Features
 
-|Geoserver |  |   | Features | | | |
+|Geoserver |  |   | Features | | | | |
 
-|Spacebel |  |   | Features, Catalogue | | Processes | |
+|Spacebel |  |   | Features, Catalogue | | Processes | | |
 
-|West University of Timisoara | | | | | Processes | |
+|West University of Timisoara | | | | | Processes | | |
 
-|rasdaman | | | | | | Coverages | Coverages
+|rasdaman | | | | | | Coverages | Coverages |
+
+|MAGE | | | | | | | | Features
 
 |===
 
