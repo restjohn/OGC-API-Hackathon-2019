@@ -1,0 +1,151 @@
+[[NGAMobileApps]]
+=== U.S. National Geospatial-Intelligence Agency, GEOINT Services, Mobile Apps
+
+Developers::
+https://github.com/bosborn[Brian Osborn], http://www.caci.com/bit-systems/[CACI-BITS]:::
+    Author of NGA's published open source https://ngageoint.github.io/GeoPackage/[GeoPackage] libraries used in NGA mobile applications
+https://github.com/restjohn[Robert St. John], http://www.caci.com/bit-systems/[CACI-BITS]:::
+    Developer on NGA's open source https://github.com/ngageoint/MAGE[MAGE] mobile, server, and web applications
+
+==== Motivation to Participate
+
+* Assess the feasibility of implementing OGC's new OpenAPI-based
+Features API as native operations in the MAGE server to expose MAGE data
+through a standard, interoperable API.
+* Assess the feasibility of implementing a consumer of OGC's new OpenAPI-based Features API that can build GeoPackages using standard feature
+data from multiple different services for offline use in MAGE and any other
+offline-capable mobile app.
+
+==== Implemented Solution
+
+* https://github.com/ngageoint/mage-server/tree/wfs3[MAGE server OGC API - Features]
+* https://github.com/ngageoint/ogc-api-features-json-java[OGC API Features JSON]
+** Extends https://github.com/ngageoint/simple-features-geojson-java/tree/develop[Simple Features GeoJSON]
+* GeoPackage Feature generator
+** https://github.com/ngageoint/geopackage-core-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Core]
+** https://github.com/ngageoint/geopackage-java/tree/develop/src/main/java/mil/nga/geopackage/features[GeoPackage Java]
+** https://github.com/ngageoint/geopackage-android/tree/develop/geopackage-sdk/src/main/java/mil/nga/geopackage/features[GeoPackage Android]
+
+==== Proposed Alternatives
+
+* None
+
+==== Experiences with OGC API Specifications
+
+* The https://github.com/opengeospatial/WFS_FES[OGC API - Features repository] reuse of the https://www.opengeospatial.org/standards/sfa[Simple Features specification] was helpful.
+
+==== Other Impressions & Recommendations
+All of the following are based on reading http://docs.opengeospatial.org/DRAFTS/17-069r2.html.
+
+* Keep the https://github.com/opengeospatial/WFS_FES[OGC API - Features] repository up to date, including
+** the https://app.swaggerhub.com/apis/cholmesgeo/WFS3/M1[SwaggerHub] referenced from the https://github.com/opengeospatial/WFS_FES/blob/master/README.md#using-the-standard[README]
+** the local https://github.com/opengeospatial/WFS_FES/blob/master/openapi.yaml[yaml] documents
+* Improve the documentation on CRS extension usage
+* Validate the https://github.com/opengeospatial/WFS_FES/blob/master/implementations.md[referenced implementations] against the current specification
+* Update Simple Feature references to refer to https://www.opengeospatial.org/standards/sfa[Simple Feature Access - Part 1: Common Architecture], version 1.2.1, http://portal.opengeospatial.org/files/?artifact_id=25355[document 06-103r4]
+* Consider requiring https://www.w3.org/TR/html5/introduction.html#html-vs-xhtml[_XML syntax for HTML_] for HTML conformance, which implies all HTML documents are well-formed.
+** makes the document more machine-friendly without sacrificing
+human-readability
+** makes the document easier to consume for dynamic/generic clients using widely
+available XML libraries instead of more lax, HTML-specific libraries with HTML's
+specific parsing requirements
+** facilitates HTTP/1.1 agent-driven negotiation for non-user-facing clients
+whose initial request to a service returns an HTML response
+** enables the use of XPath and XSLT on HTML documents
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_references_to_openapi_components_in_normative_statements[Section 5.5.3]: core response requirements defined using OpenAPI JSON Schema
+fragments imply a response media type of `application/json`.  Is this actually
+the requirement?  Either way, this requires more specific explanation.
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_response[Section 7.2.2], landing page response:
+** Is the core requirement for the landing page to return JSON by default?
+** If following RFC 8288, the link relation types `conformance` and `data`
+should be URIs, according to RFC 8288, https://tools.ietf.org/html/rfc8288#section-2.1.2[section 2.1.2],
+because they are "extension" link types that do not appear in the
+https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA Registry].
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_declaration_of_conformance_classes[section 7.4]: Ostensibly, the response for the `/conformance` path must be a
+JSON document, but the language in the spec is not clear.  Is that the case?
+If so, the requirements should state the required `Content-Type` of the response
+is `application/json` and the JSON document must be valid with respect to the
+https://raw.githubusercontent.com/opengeospatial/WFS_FES/master/core/openapi/schemas/conf-classes.yaml[OpenAPI JSON Schema].
+* http://docs.opengeospatial.org/DRAFTS/17-069r2.html#encodings[Section 7.9]: another reference to content negotiation as defined by HTTP/1.1.
+HTTP/1.1 content negotiation is quite abstract without many concrete
+requirements.  The _NOTE_ at the end of the section gives the `accept` and `f`
+query parameters as examples, but not requirements.  See below.
+* Require specific attributes on HTML links so a dynamic client can easily parse
+and inspect them, and to enable automated testing of the HTML conformance class
+rather than having to
+http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_html_content["Manually inspect the document against the schema."]
+Some ideas for HTML `link` and `a` tags are below.
+** Require the `rel` attribute to include the relationship types the spec defines.
+** Require the `type` attribute to specify the media type of the target link.
+** Perhaps require the `class` attribute to include a meaningful marker, such
+as ogc:api.
+** If other link attributes are necessary, the spec could define data tag
+requirements.
+** See https://www.w3.org/TR/html5/introduction.html#design-notes-extensibility[HTML5 Extensibility]
+* Roy Fielding's ReST, https://www.ics.uci.edu/~fielding/pubs/dissertation/evaluation.htm#sec_6_3_2_7[6.3.2.7 Content Negotiation]
+
+===== Content Negotiation
+During the hackathon, we had some issues developing the _OGC API - Features_
+client against the available services relating to content negotiation. We
+observed that many of the OGCAF service implementations used at the hackathon
+relied on the `f=json` query parameter to return GeoJSON to the client, while
+the value in the `Accept` request header had no effect.  This is presumably due
+to the note block in https://www.kalea.at/en/news-en/out-now-german-bier-box-xxl/[section 7.9]
+and some example http://docs.opengeospatial.org/DRAFTS/17-069r2.html#example_12[snippets]
+in the OGCAF draft spec document using that parameter as a strategy for content
+negotiation.  However, that parameter is not a formal requirement or
+recommendation anywhere in the specification.
+
+There are several points in the spec document that reference HTTP content
+negotiation to determine the format of the response as described in the
+https://tools.ietf.org/html/rfc2616#section-12[HTTP/1.1 spec].  Requirement
+http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_http_1_1[req/core/http],
+and http://docs.opengeospatial.org/DRAFTS/17-069r2.html#encodings[section 7.9]
+states that `req/core/http` implies server implementations must support content
+negotiation as the HTTP/1.1 spec defines.  Unfortunately, while the HTTP/1.1
+spec describes the options of server-driven and agent-driven negotiation,
+requirements for implementing both types of negotiation are open-ended, leaving
+many details to individual implementations.
+
+The OGCAF Core conformance class could simplify client development by defining
+concrete requirements for content negotiation.  For example, all server
+implementations must use a `format` query parameter whose value is a media type
+string or media type short alias, such as `format=json`.  This would be the
+implementation of server-driven negotiation.
+
+For agent-driven negotiation, the OGCAF Core could include a requirement that
+all resources with `alternate` links to other representations must include those
+`alternate` links in the `Link` response header and must include the link `type`
+attribute, per https://tools.ietf.org/html/rfc8288#section-3[RFC 8288].  This is
+a formal http://docs.opengeospatial.org/DRAFTS/17-069r2.html#_link_headers[recommendation]
+in the OGCAF spec at the time of this writing, but includes wording that
+invalidates the recommendation under certain circumstances.  For the specific
+purpose of `alternate` links of the context resource, the `Link` header should
+be a requirement so generic clients can have concrete expectations to negotiate
+the content types they support.  This would also allow clients to obtain the
+`alternate` links with a `HEAD` request as opposed to a more expensive `GET`
+request.
+
+===== Missing `DescribeFeatureType`
+While developing the OGCAF client at the Hackathon, we questioned the lack of
+a `DescribeFeatureType` operation in OGCAF analogous to that of WFS 2.  Our
+use case was to request OGCAF features to import them into GeoPackage feature
+tables.  The initial concept assumed the client would request information on
+the type of features in a feature collection to setup the database schema in a
+GeoPackage before beginning to import the features themselves to the tables.
+Without an explicit `DescribeFeatureType` operation to describe the feature
+structure, the solution was to build the schema on-the-fly as the client
+encountered features and their properties, which required quite complex
+transactions in the context of a GeoPackage relational database.
+
+Our server implementation took the approach of specialized schema components in
+the OpenAPI document for each collection.  That produced quite an unwieldy
+OpenAPI document and could make the data model more difficult for generic
+clients to construct.
+
+We observed that this is an https://github.com/opengeospatial/WFS_FES/issues/56[open issue].
+There are as some https://github.com/opengeospatial/WFS_FES/issues/56#issuecomment-371191281[comments]
+on the issue that reflect the problems in our server implementation's OpenAPI
+document.  The discussion on the issue appears to have led to the conclusion
+that some `DescribeFeatureType` operation should be part of the OGCAF Core spec,
+and we agree.
